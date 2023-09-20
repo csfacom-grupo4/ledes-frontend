@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="nav-content">
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of items">
+        {{ item | uppercase }}
+      </li>
+    </ul>
+    <div class="nav-icons">
+      <span uk-icon="icon: sign-in; ratio: 1.5"></span>
+    </div>
+  </div>
+</nav>
