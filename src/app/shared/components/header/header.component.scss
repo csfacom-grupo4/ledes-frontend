@@ -1,0 +1,11 @@
+@import "../../../../assets/scss/global";
+
+.logo-header {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(32px);
+
+  .logo {
+    height: rem(56px);
+  }
+}
