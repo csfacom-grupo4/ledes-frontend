@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/global";
+
+.footer {
+  background-color: $main_black;
+  height: rem(72px);
+  color: $main_white;
+  padding: rem(32px);
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .logo {
+      height: rem(40px);
+    }
+
+    .links {
+      list-style: none;
+      display: flex;
+      gap: rem(24px);
+
+      a {
+        color: $main_white;
+      }
+    }
+  }
+}
