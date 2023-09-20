@@ -22,6 +22,10 @@
 
       a {
         color: $main_white;
+
+        &:hover {
+          color: $main_gray;
+        }
       }
     }
   }
