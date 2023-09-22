@@ -1,15 +1,23 @@
 @import "../../../../assets/scss/global";
 
 .footer {
-  background-color: $main_black;
-  height: rem(72px);
   color: $main_white;
   padding: rem(32px);
+  font-size: rem(14px);
 
-  .container {
-    display: flex;
-    justify-content: space-evenly;
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(32px);
     align-items: center;
+
+    @include screen-m {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(8px);
+      font-size: rem(12px);
+      margin-bottom: rem(32px);
+    }
 
     .logo {
       height: rem(40px);
