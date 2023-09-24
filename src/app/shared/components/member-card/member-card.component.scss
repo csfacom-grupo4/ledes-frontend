@@ -1,0 +1,13 @@
+@import "../../../../assets/scss/global";
+
+.card-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: rem(16px);
+
+  span {
+    color: $main_black;
+    align-self: center;
+    font-size: rem(20px);
+  }
+}

@@ -1,12 +1,10 @@
 @import "../../../../assets/scss/global";
 
 .navbar {
-  background-color: $main_black;
   height: rem(56px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 rem(32px);
 
   .nav-content {
     display: flex;

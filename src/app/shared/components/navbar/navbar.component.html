@@ -1,12 +1,37 @@
-<nav class="navbar">
-  <div class="nav-content">
+<nav class="navbar uk-visible@s uk-background-secondary">
+  <div class="nav-content uk-container">
     <ul class="nav-items">
-      <li class="nav-item" *ngFor="let item of items">
+      <li class="nav-item" *ngFor="let item of items" routerLink="#">
         {{ item | uppercase }}
       </li>
     </ul>
     <div class="nav-icons">
       <span uk-icon="icon: sign-in; ratio: 1.5"></span>
+    </div>
+  </div>
+</nav>
+
+<nav class="uk-navbar-container uk-hidden@s">
+  <div class="uk-container uk-background-secondary">
+    <div uk-navbar>
+      <div class="uk-navbar-left">
+        <a
+          class="uk-navbar-toggle uk-navbar-toggle-animate"
+          uk-navbar-toggle-icon
+          style="color: #fff"
+          href="#"
+        ></a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li *ngFor="let item of items" routerLink="#">
+              <a routerLink="#">{{ item | uppercase }}</a>
+            </li>
+            <li>
+              <a class="uk-link-muted" routerLink="#">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

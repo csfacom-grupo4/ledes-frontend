@@ -1,0 +1,28 @@
+$screen-s: 640px;
+$screen-m: 960px;
+$screen-l: 1200px;
+$screen-xl: 1600px;
+
+@mixin screen-s {
+  @media only screen and (max-width: $screen-s) {
+    @content;
+  }
+}
+
+@mixin screen-m {
+  @media only screen and (max-width: $screen-m) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media only screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media only screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
