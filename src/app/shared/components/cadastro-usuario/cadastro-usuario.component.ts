@@ -13,6 +13,7 @@ export class CadastroUsuarioComponent {
     email: '',
     telefone: '',
     linkedin: '',
+    curso: '',
     senha: '',
     funcao: '',
     isAdmin: false,
