@@ -1,26 +1,29 @@
 @import "../../../../assets/scss/global";
 
-.logo-header {
-  display: flex;
-  justify-content: space-between;
-  padding: rem(32px);
-
-  @include screen-s {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    height: rem(56px);
+.header {
+  background-color: $main_white;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(32px);
 
     @include screen-s {
-      height: rem(48px);
+      flex-direction: column;
+      align-items: center;
     }
-  }
 
-  .logo:last-child {
-    @include screen-s {
-      display: none;
+    .logo {
+      height: rem(56px);
+
+      @include screen-s {
+        height: rem(48px);
+      }
+    }
+
+    .logo:last-child {
+      @include screen-s {
+        display: none;
+      }
     }
   }
 }

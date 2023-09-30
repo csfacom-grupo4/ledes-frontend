@@ -8,9 +8,16 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MemberCardComponent } from './shared/components/member-card/member-card.component';
-import { CadastroUsuarioComponent } from './shared/components/cadastro-usuario/cadastro-usuario.component';
+import { CadastroUsuarioComponent } from './features/cadastro-usuario/cadastro-usuario.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavbarComponent, FooterComponent, MemberCardComponent, CadastroUsuarioComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    NavbarComponent,
+    FooterComponent,
+    MemberCardComponent,
+    CadastroUsuarioComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
