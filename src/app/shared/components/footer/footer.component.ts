@@ -8,5 +8,5 @@ import { Link } from '../../interfaces/link';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  items: Link[] = LINKS;
+  links: Link[] = LINKS;
 }

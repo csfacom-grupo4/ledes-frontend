@@ -1,39 +1,46 @@
 @import "../../../../assets/scss/global";
 
 .footer {
-  color: $main_white;
-  padding: rem(32px);
-  font-size: rem(14px);
+  height: rem(96px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(16px);
+  padding: rem(16px);
 
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: rem(32px);
+  @include screen-s {
+    grid-template-columns: 1fr;
+    row-gap: rem(24px);
+    height: rem(176px);
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
     align-items: center;
 
-    @include screen-s {
-      display: flex;
-      flex-direction: column;
-      row-gap: rem(8px);
-      font-size: rem(12px);
-      margin-bottom: rem(32px);
+    img {
+      height: rem(48px);
     }
+  }
 
-    .logo {
-      height: rem(40px);
-    }
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-white;
+    text-align: center;
+  }
 
-    .links {
-      list-style: none;
-      display: flex;
-      gap: rem(24px);
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(16px);
+    a {
+      color: $main-white;
 
-      a {
-        color: $main_white;
-
-        &:hover {
-          color: $main_gray;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

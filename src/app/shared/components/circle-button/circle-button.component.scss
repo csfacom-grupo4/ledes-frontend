@@ -1,0 +1,18 @@
+@import "../../../../assets/scss/global";
+
+.circle-button {
+  border-radius: 50%;
+  width: rem(40px);
+  height: rem(40px);
+  color: $main-white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: $main-red;
+}
+
+.delete {
+  background-color: $main-yellow;
+}

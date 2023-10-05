@@ -6,7 +6,10 @@
       </li>
     </ul>
     <div class="nav-icons">
-      <span uk-icon="icon: sign-in; ratio: 1.5"></span>
+      <span
+        uk-icon="icon: sign-in; ratio: 1.5"
+        [routerLink]="['/login']"
+      ></span>
     </div>
   </div>
 </nav>
@@ -27,7 +30,7 @@
               <a routerLink="#">{{ item | uppercase }}</a>
             </li>
             <li>
-              <a class="uk-link-muted" routerLink="#">LOGIN</a>
+              <a class="uk-link-muted" [routerLink]="['/login']">LOGIN</a>
             </li>
           </ul>
         </div>

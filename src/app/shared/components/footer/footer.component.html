@@ -1,19 +1,13 @@
-<footer class="footer uk-background-secondary">
-  <div class="uk-container">
-    <div class="footer-container">
-      <img
-        src="./../../../../assets/logos/white-logo.svg"
-        alt="Logo LEDES"
-        class="logo"
-      />
-      <p class="description">
-        Laboratório de Engenharia de Software - FACOM - UFMS
-      </p>
-      <ul class="links">
-        <li *ngFor="let item of items" class="link">
-          <a href="{{ item.url }}">{{ item.name | uppercase }}</a>
-        </li>
-      </ul>
-    </div>
+<div class="footer uk-background-secondary">
+  <div class="footer__logo">
+    <img src="../../../../assets/logos/white-logo.svg" alt="Logo LEDES" />
   </div>
-</footer>
+  <div class="footer__name">
+    <span>Laboratório de Engenharia de Software - UFMS</span>
+  </div>
+  <div class="footer__links">
+    <span *ngFor="let link of links">
+      <a [href]="link.url" target="_blank">{{ link.name | uppercase }}</a>
+    </span>
+  </div>
+</div>
