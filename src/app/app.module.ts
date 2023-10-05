@@ -9,6 +9,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MemberCardComponent } from './shared/components/member-card/member-card.component';
 import { CadastroUsuarioComponent } from './features/cadastro-usuario/cadastro-usuario.component';
+import { LoginComponent } from './features/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { CadastroUsuarioComponent } from './features/cadastro-usuario/cadastro-u
     FooterComponent,
     MemberCardComponent,
     CadastroUsuarioComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

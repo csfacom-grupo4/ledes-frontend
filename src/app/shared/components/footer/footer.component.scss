@@ -11,7 +11,7 @@
     row-gap: rem(32px);
     align-items: center;
 
-    @include screen-m {
+    @include screen-s {
       display: flex;
       flex-direction: column;
       row-gap: rem(8px);

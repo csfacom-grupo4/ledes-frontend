@@ -1,0 +1,13 @@
+@import "../../../assets/scss/global";
+
+.wrapper {
+  margin: auto;
+  .logo {
+    height: rem(48px);
+    margin-top: rem(24px);
+
+    @include screen-s {
+      height: rem(32px);
+    }
+  }
+}

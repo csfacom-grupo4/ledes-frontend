@@ -1,7 +1,7 @@
-$screen-s: 640px;
-$screen-m: 960px;
-$screen-l: 1200px;
-$screen-xl: 1600px;
+$screen-s: 639px;
+$screen-m: 959px;
+$screen-l: 1199px;
+$screen-xl: 1599px;
 
 @mixin screen-s {
   @media only screen and (max-width: $screen-s) {
