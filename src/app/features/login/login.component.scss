@@ -1,13 +1,31 @@
 @import "../../../assets/scss/global";
 
-.wrapper {
-  margin: auto;
-  .logo {
-    height: rem(48px);
-    margin-top: rem(24px);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: rem(100px) 0;
+    width: rem(500px);
+    height: rem(400px);
+    padding: rem(32px);
 
-    @include screen-s {
-      height: rem(32px);
+    &__logo {
+      height: rem(48px);
+    }
+
+    &__title {
+      font-size: rem(36px);
+      color: $main-black;
+      text-align: center;
+    }
+
+    &__fields {
+      width: 80%;
     }
   }
 }
