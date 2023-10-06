@@ -1,12 +1,6 @@
-<button class="circle-button">
-  <span
-    class="edit"
-    *ngIf="action === 'edit'"
-    uk-icon="icon: pencil; ratio: 1.2"
-  ></span>
-  <span
-    class="delete"
-    *ngIf="action === 'delete'"
-    uk-icon="icon: trash; ratio: 1.2"
-  ></span>
+<button class="circle-button edit" *ngIf="action === 'edit'">
+  <span uk-icon="icon: pencil; ratio: 1.2"></span>
+</button>
+<button class="circle-button delete" *ngIf="action === 'edit'">
+  <span uk-icon="icon: trash; ratio: 1.2"></span>
 </button>

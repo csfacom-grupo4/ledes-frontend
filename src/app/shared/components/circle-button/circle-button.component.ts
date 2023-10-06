@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./circle-button.component.scss'],
 })
 export class CircleButtonComponent {
-  @Input() action!: 'edit' | 'delete';
+  @Input({ required: true }) action!: 'edit' | 'delete';
 }

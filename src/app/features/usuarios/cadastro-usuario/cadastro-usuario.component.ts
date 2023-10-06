@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-usuario',
   templateUrl: './cadastro-usuario.component.html',
-  styleUrls: ['./cadastro-usuario.component.scss']
+  styleUrls: ['./cadastro-usuario.component.scss'],
 })
 export class CadastroUsuarioComponent {
   usuario = {
@@ -23,6 +23,8 @@ export class CadastroUsuarioComponent {
 
   imagemPerfil: string | ArrayBuffer | null = null;
   repetirSenha = '';
+
+  constructor(private router: Router) {}
 
   onFileSelected(event: any): void {
     const file = event.target.files[0];
@@ -51,5 +53,8 @@ export class CadastroUsuarioComponent {
       console.error('As senhas não conferem ou não atendem aos requisitos.');
     }
   }
-}
 
+  navigateBack() {
+    this.router.navigate(['/user']);
+  }
+}

@@ -209,12 +209,16 @@
       </div>
     </div>
     <div class="uk-margin-top uk-text-right">
-      <button class="uk-button uk-modal-close" type="button">Cancelar</button>
+      <button
+        class="uk-button uk-modal-close"
+        type="button"
+        (click)="navigateBack()"
+      >
+        Cancelar
+      </button>
       <button class="uk-button uk-button-primary uk-margin-left" type="submit">
         Cadastrar
       </button>
     </div>
   </form>
 </div>
-
-<app-circle-button></app-circle-button>
