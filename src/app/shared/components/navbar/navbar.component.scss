@@ -30,11 +30,15 @@
       }
     }
     .nav-icons {
-      color: $main_white;
-      cursor: pointer;
+      display: flex;
+      gap: rem(8px);
+      span {
+        color: $main_white;
+        cursor: pointer;
 
-      &:hover {
-        color: $main_gray;
+        &:hover {
+          color: $main_gray;
+        }
       }
     }
   }

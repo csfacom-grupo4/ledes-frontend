@@ -7,7 +7,11 @@
     </ul>
     <div class="nav-icons">
       <span
-        uk-icon="icon: sign-in; ratio: 1.5"
+        uk-icon="icon: cog; ratio: 1.2"
+        uk-toggle="target: #offcanvas-usage"
+      ></span>
+      <span
+        uk-icon="icon: sign-out; ratio: 1.2"
         [routerLink]="['/login']"
       ></span>
     </div>
@@ -38,3 +42,13 @@
     </div>
   </div>
 </nav>
+
+<div id="offcanvas-usage" uk-offcanvas>
+  <div class="uk-offcanvas-bar">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+    <h3>Menu</h3>
+
+    <span><a [routerLink]="['/user']">GERENCIAR USUÁRIOS</a></span>
+  </div>
+</div>
