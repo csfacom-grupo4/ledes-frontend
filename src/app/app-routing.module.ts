@@ -3,6 +3,7 @@ import { ListaUsuariosComponent } from './features/usuarios/lista-usuarios/lista
 import { LoginComponent } from './features/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GerenciarPapelVinculoComponent } from './features/gerenciar-papel-vinculo/gerenciar-papel-vinculo.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: CadastroUsuarioComponent,
   },
   { path: 'login', component: LoginComponent },
+  { path: 'gerenciar-papel&vinculo', component: GerenciarPapelVinculoComponent },
 ];
 
 @NgModule({

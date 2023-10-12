@@ -13,6 +13,8 @@ import { LoginComponent } from './features/login/login.component';
 import { ListCardComponent } from './shared/components/list-card/list-card.component';
 import { CircleButtonComponent } from './shared/components/circle-button/circle-button.component';
 import { ListaUsuariosComponent } from './features/usuarios/lista-usuarios/lista-usuarios.component';
+import { FormUnitarioPapelVinculoComponent } from './shared/components/form-unitario-papel-vinculo/form-unitario-papel-vinculo.component';
+import { GerenciarPapelVinculoComponent } from './features/gerenciar-papel-vinculo/gerenciar-papel-vinculo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { ListaUsuariosComponent } from './features/usuarios/lista-usuarios/lista
     ListCardComponent,
     CircleButtonComponent,
     ListaUsuariosComponent,
+    FormUnitarioPapelVinculoComponent,
+    GerenciarPapelVinculoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
