@@ -1,8 +1,8 @@
 <nav class="navbar uk-visible@s uk-background-secondary">
   <div class="nav-content uk-container">
     <ul class="nav-items">
-      <li class="nav-item" *ngFor="let item of items" routerLink="#">
-        {{ item | uppercase }}
+      <li class="nav-item" *ngFor="let item of items" [routerLink]="item.route">
+        {{ item.page | uppercase }}
       </li>
     </ul>
     <div class="nav-icons">
@@ -30,8 +30,8 @@
         ></a>
         <div class="uk-navbar-dropdown">
           <ul class="uk-nav uk-navbar-dropdown-nav">
-            <li *ngFor="let item of items" routerLink="#">
-              <a routerLink="#">{{ item | uppercase }}</a>
+            <li *ngFor="let item of items" [routerLink]="item.route">
+              <a routerLink="#">{{ item.page | uppercase }}</a>
             </li>
             <li>
               <a class="uk-link-muted" [routerLink]="['general/login']"

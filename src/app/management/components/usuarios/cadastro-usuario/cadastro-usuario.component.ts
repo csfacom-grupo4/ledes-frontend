@@ -55,6 +55,6 @@ export class CadastroUsuarioComponent {
   }
 
   navigateBack() {
-    this.router.navigate(['/user']);
+    this.router.navigate(['/management/usuarios']);
   }
 }

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  items: string[] = ['Notícias', 'Projetos', 'Membros', 'Sobre nós'];
+  items: any = [
+    { page: 'Notícias', route: ['general/noticias'] },
+    { page: 'Projetos', route: ['general/projetos'] },
+    { page: 'Membros', route: ['general/membros'] },
+    { page: 'Sobre nós', route: ['general/sobre-nos'] },
+  ];
 }

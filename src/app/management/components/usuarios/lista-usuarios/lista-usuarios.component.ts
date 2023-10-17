@@ -33,6 +33,6 @@ export class ListaUsuariosComponent {
   constructor(private router: Router) {}
 
   navigate() {
-    this.router.navigate(['/add-user']);
+    this.router.navigate(['management/cadastrar-usuario']);
   }
 }

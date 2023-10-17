@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/general/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/general/noticias', pathMatch: 'full' },
   {
     path: 'management',
     loadChildren: () =>
@@ -13,6 +13,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./general/general.module').then((m) => m.GeneralModule),
   },
+  { path: '**', redirectTo: '/general/noticias' },
 ];
 
 @NgModule({
