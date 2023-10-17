@@ -1,0 +1,22 @@
+<div class="uk-margin-top">
+ <div class="uk-flex uk-flex-center uk-margin-left uk-margin-right"> <h1>Gerenciar vínculos e papéis</h1></div>
+ <div class="uk-flex uk-flex-center">
+  <div class="uk-width-4-5 uk-width-3-5@s uk-width-1-2@l">
+    <div class="uk-margin uk-margin-large-top ">
+    <app-form-unitario-papel-vinculo buttonText="Adicionar vínculo" placeholderText="Digite o tipo de vínculo" apiURL="https://sua-api.com/endpoint" (onSubmit)="handleFormSubmit($event)"></app-form-unitario-papel-vinculo>
+   
+       <app-list-card 
+        *ngFor="let vinculo of vinculos"
+        [text]="vinculo"></app-list-card>
+    </div>
+        <div class="uk-margin uk-margin-large-top">
+<app-form-unitario-papel-vinculo buttonText="Adicionar papel" placeholderText="Digite o tipo de papel" apiURL="https://sua-api.com/endpoint" (onSubmit)="handleFormSubmit($event)"></app-form-unitario-papel-vinculo>
+   
+    <app-list-card
+    *ngFor="let papel of papeis"
+    [text]="papel"></app-list-card>
+  </div>
+  </div>
+  </div>
+  </div>
+  

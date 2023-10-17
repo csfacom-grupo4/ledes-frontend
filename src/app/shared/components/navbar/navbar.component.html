@@ -1,0 +1,59 @@
+<nav class="navbar uk-visible@s uk-background-secondary">
+  <div class="nav-content uk-container">
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of items" [routerLink]="item.route">
+        {{ item.page | uppercase }}
+      </li>
+    </ul>
+    <div class="nav-icons">
+      <span
+        uk-icon="icon: cog; ratio: 1.2"
+        uk-toggle="target: #offcanvas-usage"
+      ></span>
+      <span
+        uk-icon="icon: sign-out; ratio: 1.2"
+        [routerLink]="['/general/login']"
+      ></span>
+    </div>
+  </div>
+</nav>
+
+<nav class="uk-navbar-container uk-hidden@s">
+  <div class="uk-container uk-background-secondary">
+    <div uk-navbar>
+      <div class="uk-navbar-left">
+        <a
+          class="uk-navbar-toggle uk-navbar-toggle-animate"
+          uk-navbar-toggle-icon
+          style="color: #fff"
+          href="#"
+        ></a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li *ngFor="let item of items" [routerLink]="item.route">
+              <a routerLink="#">{{ item.page | uppercase }}</a>
+            </li>
+            <li>
+              <a class="uk-link-muted" [routerLink]="['general/login']"
+                >LOGIN</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="offcanvas-usage" uk-offcanvas>
+  <div class="uk-offcanvas-bar">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+    <h3>Menu</h3>
+    <div class="uk-margin-top">
+      <div class="uk-margin-top" *ngFor="let link of links">
+        <a [routerLink]="link.route">{{ link.page | uppercase }}</a>
+      </div>
+    </div>
+  </div>
+</div>

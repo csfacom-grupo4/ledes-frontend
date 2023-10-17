@@ -1,0 +1,45 @@
+@import "../../../../assets/scss/global";
+
+.navbar {
+  height: rem(56px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .nav-items {
+      display: flex;
+      list-style: none;
+      gap: rem(24px);
+      margin: 0;
+      padding: 0;
+
+      .nav-item {
+        color: $main_white;
+        font-weight: 300;
+        cursor: pointer;
+
+        &:hover {
+          color: $main_gray;
+        }
+      }
+    }
+    .nav-icons {
+      display: flex;
+      gap: rem(8px);
+      span {
+        color: $main_white;
+        cursor: pointer;
+
+        &:hover {
+          color: $main_gray;
+        }
+      }
+    }
+  }
+}

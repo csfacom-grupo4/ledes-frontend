@@ -1,0 +1,14 @@
+<div class="container uk-container u">
+  <div class="users">
+    <div class="users__title">Gerenciar usuários</div>
+    <button class="uk-button uk-button-primary uk-margin" (click)="navigate()">
+      Adicionar usuário
+    </button>
+    <div class="users__list uk-margin">
+      <app-list-card
+        *ngFor="let usuario of usuarios"
+        [text]="usuario"
+      ></app-list-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+@import "../../../../assets/scss/global";
+
+.footer {
+  height: rem(96px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(16px);
+  padding: rem(16px);
+
+  @include screen-s {
+    grid-template-columns: 1fr;
+    row-gap: rem(24px);
+    height: rem(176px);
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: rem(48px);
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-white;
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(16px);
+    a {
+      color: $main-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

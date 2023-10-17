@@ -1,0 +1,13 @@
+<div class="footer uk-background-secondary">
+  <div class="footer__logo">
+    <img src="../../../../assets/logos/white-logo.svg" alt="Logo LEDES" />
+  </div>
+  <div class="footer__name">
+    <span>Laboratório de Engenharia de Software - UFMS</span>
+  </div>
+  <div class="footer__links">
+    <span *ngFor="let link of links">
+      <a [href]="link.url" target="_blank">{{ link.name | uppercase }}</a>
+    </span>
+  </div>
+</div>
