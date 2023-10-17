@@ -1,1 +1,14 @@
-<p>lista-projetos works!</p>
+<div class="container uk-container u">
+  <div class="list">
+    <div class="list__title">Gerenciar projetos</div>
+    <button class="uk-button uk-button-primary uk-margin" (click)="navigate()">
+      Adicionar projeto
+    </button>
+    <div class="list__content uk-margin">
+      <app-list-card
+        *ngFor="let projeto of projetos"
+        [text]="projeto"
+      ></app-list-card>
+    </div>
+  </div>
+</div>
