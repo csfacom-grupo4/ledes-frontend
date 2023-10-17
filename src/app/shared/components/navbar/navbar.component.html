@@ -12,7 +12,7 @@
       ></span>
       <span
         uk-icon="icon: sign-out; ratio: 1.2"
-        [routerLink]="['/login']"
+        [routerLink]="['/general/login']"
       ></span>
     </div>
   </div>
@@ -34,7 +34,9 @@
               <a routerLink="#">{{ item | uppercase }}</a>
             </li>
             <li>
-              <a class="uk-link-muted" [routerLink]="['/login']">LOGIN</a>
+              <a class="uk-link-muted" [routerLink]="['general/login']"
+                >LOGIN</a
+              >
             </li>
           </ul>
         </div>
@@ -50,10 +52,10 @@
     <h3>Menu</h3>
     <div class="uk-margin-top">
       <div class="uk-margin-top">
-        <a [routerLink]="['/user']">GERENCIAR USUÁRIOS</a>
+        <a [routerLink]="['/management/usuarios']">GERENCIAR USUÁRIOS</a>
       </div>
       <div class="uk-margin-top">
-        <a [routerLink]="['/gerenciar-papel&vinculo']"
+        <a [routerLink]="['/management/papeis-e-vinculos']"
           >GERENCIAR VÍNCULOS E PAPÉIS</a
         >
       </div>
