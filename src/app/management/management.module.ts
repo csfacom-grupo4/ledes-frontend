@@ -11,6 +11,7 @@ import { CadastroProjetoComponent } from './components/projetos/cadastro-projeto
 import { ListaNoticiasComponent } from './components/noticias/lista-noticias/lista-noticias.component';
 import { CadastroNoticiaComponent } from './components/noticias/cadastro-noticia/cadastro-noticia.component';
 import { EdicaoSobreNosComponent } from './components/sobre-nos/edicao-sobre-nos/edicao-sobre-nos.component';
+import { DadosPessoaisComponent } from './components/dados-pessoais/dados-pessoais.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EdicaoSobreNosComponent } from './components/sobre-nos/edicao-sobre-nos
     ListaNoticiasComponent,
     CadastroNoticiaComponent,
     EdicaoSobreNosComponent,
+    DadosPessoaisComponent,
   ],
   imports: [
     CommonModule,

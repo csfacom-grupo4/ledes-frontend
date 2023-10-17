@@ -51,13 +51,8 @@
 
     <h3>Menu</h3>
     <div class="uk-margin-top">
-      <div class="uk-margin-top">
-        <a [routerLink]="['/management/usuarios']">GERENCIAR USUÁRIOS</a>
-      </div>
-      <div class="uk-margin-top">
-        <a [routerLink]="['/management/papeis-e-vinculos']"
-          >GERENCIAR VÍNCULOS E PAPÉIS</a
-        >
+      <div class="uk-margin-top" *ngFor="let link of links">
+        <a [routerLink]="link.route">{{ link.page | uppercase }}</a>
       </div>
     </div>
   </div>

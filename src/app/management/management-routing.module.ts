@@ -8,6 +8,7 @@ import { ListaNoticiasComponent } from './components/noticias/lista-noticias/lis
 import { CadastroProjetoComponent } from './components/projetos/cadastro-projeto/cadastro-projeto.component';
 import { ListaProjetosComponent } from './components/projetos/lista-projetos/lista-projetos.component';
 import { EdicaoSobreNosComponent } from './components/sobre-nos/edicao-sobre-nos/edicao-sobre-nos.component';
+import { DadosPessoaisComponent } from './components/dados-pessoais/dados-pessoais.component';
 
 const managementRoutes: Routes = [
   { path: 'usuarios', component: ListaUsuariosComponent },
@@ -18,6 +19,7 @@ const managementRoutes: Routes = [
   { path: 'projetos', component: ListaProjetosComponent },
   { path: 'cadastrar-projeto', component: CadastroProjetoComponent },
   { path: 'sobre-nos', component: EdicaoSobreNosComponent },
+  { path: 'dados-pessoais', component: DadosPessoaisComponent },
 ];
 
 @NgModule({

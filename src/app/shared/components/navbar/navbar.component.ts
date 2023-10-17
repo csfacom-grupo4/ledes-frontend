@@ -12,4 +12,19 @@ export class NavbarComponent {
     { page: 'Membros', route: ['general/membros'] },
     { page: 'Sobre nós', route: ['general/sobre-nos'] },
   ];
+
+  links: any = [
+    { page: 'Gerenciar Usuários', route: ['management/usuarios'] },
+    { page: 'Gerenciar Notícias', route: ['management/noticias'] },
+    { page: 'Gerenciar Projetos', route: ['management/projetos'] },
+    {
+      page: 'Gerenciar Página do Laboratório',
+      route: ['management/sobre-nos'],
+    },
+    {
+      page: 'Gerenciar Papéis e Vínculos',
+      route: ['management/papeis-e-vinculos'],
+    },
+    { page: 'Gerenciar Dados Pessoais', route: ['management/dados-pessoais'] },
+  ];
 }
