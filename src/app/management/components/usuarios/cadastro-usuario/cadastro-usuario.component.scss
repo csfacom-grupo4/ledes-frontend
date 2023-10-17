@@ -43,7 +43,6 @@
   background-color: #0056b3;
 }
 
-
 /* Estilos para o restante do formulário */
 form {
   width: 70%;
@@ -55,10 +54,10 @@ label {
   margin-bottom: 5px;
   color: black;
 }
-.titulo{
+.titulo {
   display: flex;
   font-size: 20px;
-  color:black;
+  color: black;
 }
 
 /*input{
@@ -73,7 +72,6 @@ label {
 /* Estilos para os switches */
 .switch-group {
   display: inline;
- 
 }
 
 .switch {
@@ -87,7 +85,6 @@ label {
   transform: scale(1.5); /* Tamanho do switch */
 }
 
-
 /* -----------------------------
 Switch */
 
@@ -100,11 +97,11 @@ Switch */
 
 /* Hide default HTML checkbox */
 .uk-switch input {
-  display:none;
+  display: none;
 }
 /* Slider */
 .uk-switch-slider {
-  background-color: rgba(0,0,0,0.22);
+  background-color: rgba(0, 0, 0, 0.22);
   position: absolute;
   top: 0;
   left: 0;
@@ -113,12 +110,12 @@ Switch */
   bottom: 0;
   cursor: pointer;
   transition-property: background-color;
-	transition-duration: .2s;
-  box-shadow: inset 0 0 2px rgba(0,0,0,0.07);
+  transition-duration: 0.2s;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.07);
 }
 /* Switch pointer */
 .uk-switch-slider:before {
-  content: '';
+  content: "";
   background-color: #fff;
   position: absolute;
   width: 22px;
@@ -127,7 +124,7 @@ Switch */
   bottom: 1px;
   border-radius: 50%;
   transition-property: transform, box-shadow;
-	transition-duration: .2s;
+  transition-duration: 0.2s;
 }
 /* Slider active color */
 input:checked + .uk-switch-slider {
@@ -149,10 +146,10 @@ input:checked + .uk-switch-slider.uk-switch-on-off {
 /* Style Modifier */
 .uk-switch-slider.uk-switch-big:before {
   transform: scale(1);
-  box-shadow: 0 0 6px rgba(0,0,0,0.22);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
 }
 .uk-switch-slider.uk-switch-small:before {
-  box-shadow: 0 0 6px rgba(0,0,0,0.22);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
 }
 input:checked + .uk-switch-slider.uk-switch-big:before {
   transform: translateX(26px) scale(1.2);
@@ -160,10 +157,8 @@ input:checked + .uk-switch-slider.uk-switch-big:before {
 
 /* Inverse Modifier - affects only default */
 .uk-light .uk-switch-slider:not(.uk-switch-on-off) {
-  background-color: rgba(255,255,255,0.22);
+  background-color: rgba(255, 255, 255, 0.22);
 }
-
-
 
 button:disabled {
   background-color: #ccc;
