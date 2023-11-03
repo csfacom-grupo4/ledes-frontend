@@ -1,0 +1,17 @@
+<div class="project-card uk-card uk-card-default uk-margin-small-bottom">
+    <div class="div-imagem">
+        <img [src]="projeto.imagem || './assets/default/default_project.jpg'" alt="Imagem do Projeto" class=""/>
+    </div>
+    <div class="div-descricao">
+        <h3 class="uk-margin-left uk-margin-right">{{ projeto.titulo }}</h3>
+        <p class="uk-margin-left uk-margin-right">Coordenador: {{ projeto.coordenador }}</p>
+        <div class="uk-flex uk-flex-between uk-margin-left uk-margin-right">
+            <div class="uk-flex tipo-status">
+                <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.status }}</div>
+                <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipo }}</div>
+            </div>
+            <div>{{ projeto.dataInicio }}</div>
+        </div>
+    </div>
+  </div>
+  

@@ -8,6 +8,7 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { MembrosComponent } from './components/membros/membros.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { ProjectCardComponent } from '../shared/components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
     ProjetosComponent,
     MembrosComponent,
     SobreNosComponent,
+    ProjectCardComponent,
   ],
   imports: [
     CommonModule,
