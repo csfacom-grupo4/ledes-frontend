@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-projetos',
-  templateUrl: './projetos.component.html',
-  styleUrls: ['./projetos.component.scss']
+  selector: 'app-lista-projetos',
+  templateUrl: './lista-projetos.component.html',
+  styleUrls: ['./lista-projetos.component.scss']
 })
-export class ProjetosComponent {
+export class ListaProjetosComponent {
   @Input() projeto: any;
   listaProjetos: any[]; // Supondo que a API retorna uma lista de projetos
 
@@ -22,4 +23,7 @@ export class ProjetosComponent {
   formatarClasseStatus(status: string): string {
     return status.toLowerCase().replace(/\s+/g, '-');
   }
+
+  
+
 }
