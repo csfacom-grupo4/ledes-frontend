@@ -1,1 +1,122 @@
-<p>cadastro-projeto works!</p>
+<div class="container uk-container">
+  <div class="cover-image-container uk-margin-large-top">
+    <div class="cover-image">
+      <img *ngIf="imagemProjeto" [src]="imagemProjeto" alt="Imagem de Capa" />
+    </div>
+
+    <div class="js-upload uk-margin-top" uk-form-custom>
+      <input
+        type="file"
+        #fileInput
+        (change)="onFileSelected($event)"
+        accept="image/*"
+      />
+      <button
+        class="uk-button uk-button-secondary"
+        type="button"
+        tabindex="-1"
+        (click)="fileInput.click()"
+      >
+        Definir imagem de capa
+      </button>
+    </div>
+  </div>
+
+  <form class="form-container uk-margin-large">
+    <div class="uk-margin">
+      <label> Título do projeto </label>
+      <input class="uk-input" type="text" aria-label="Input" />
+    </div>
+    <div class="uk-margin date-fields">
+      <div>
+        <label> Data de início </label>
+        <input
+          class="uk-input"
+          type="date"
+          placeholder="Data de início"
+          aria-label="Input"
+        />
+      </div>
+      <div>
+        <label> Data de término </label>
+        <input
+          class="uk-input"
+          type="date"
+          placeholder="Data de término"
+          aria-label="Input"
+        />
+      </div>
+    </div>
+    <div class="uk-margin">
+      <label> Descrição do projeto </label>
+      <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>
+    </div>
+    <div class="uk-margin">
+      <label> Coordenador do projeto </label>
+      <select class="uk-select" aria-label="Select">
+        <option>Option 01</option>
+        <option>Option 02</option>
+        <option>Option 03</option>
+      </select>
+    </div>
+    <div class="uk-margin date-fields">
+      <div>
+        <label>Situação</label>
+        <select class="uk-select" aria-label="Select">
+          <option>Em andamento</option>
+          <option>Concluído</option>
+          <option>Descontinuado</option>
+        </select>
+      </div>
+      <div>
+        <label> Tipo de projeto </label>
+        <select class="uk-select" aria-label="Select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+          <option>Option 03</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- <div class="uk-margin">
+        <select class="uk-select" aria-label="Select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+
+      <div class="uk-margin">
+        <textarea
+          class="uk-textarea"
+          rows="5"
+          placeholder="Textarea"
+          aria-label="Textarea"
+        ></textarea>
+      </div>
+
+      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label
+          ><input class="uk-radio" type="radio" name="radio2" checked />
+          A</label
+        >
+        <label><input class="uk-radio" type="radio" name="radio2" /> B</label>
+      </div>
+
+      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label><input class="uk-checkbox" type="checkbox" checked /> A</label>
+        <label><input class="uk-checkbox" type="checkbox" /> B</label>
+      </div>
+
+      <div class="uk-margin">
+        <input
+          class="uk-range"
+          type="range"
+          value="2"
+          min="0"
+          max="10"
+          step="0.1"
+          aria-label="Range"
+        />
+      </div> -->
+  </form>
+</div>

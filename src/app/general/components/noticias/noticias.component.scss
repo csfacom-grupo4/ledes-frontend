@@ -1,0 +1,12 @@
+@import "./../../../../assets/scss/global";
+
+.title {
+  margin-top: rem(32px);
+  font-size: rem(28px);
+  color: $main-black;
+}
+
+.custom-slider {
+  width: 800px;
+  height: 400px;
+}
