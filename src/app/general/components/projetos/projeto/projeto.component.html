@@ -1,1 +1,36 @@
-<p>projeto works! {{ id }}</p>
+<div class="projeto-component">
+    <div class="projeto-titulo">
+        <h2>{{ projeto.titulo}}</h2>
+    </div>
+    <div class="uk-margin-top">
+        <div class="uk-flex tipo-status">
+            <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.situacao }}</div>
+            <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipo }}</div>
+        </div>
+       <div class="uk-flex uk-margin-top"><div>{{ projeto.data_inicio }} </div><div class="" *ngIf="projeto.dataFim !== null">-{{ projeto.data_termino }}</div>
+          <div class="uk-text-left" *ngIf="projeto.data_termino === null">agora
+          </div>
+        </div> 
+    </div>
+    <div  class="descricao-projeto uk-card uk-card-body uk-card-default uk-margin-large-top">
+        <div>{{projeto.descricao}}</div>
+    </div>
+    <!--Coordenador-->
+    <div>
+        <div class="uk-margin-top">
+            <h3>Coordenador do Projeto</h3>
+        </div>
+        <div>
+            <app-member-card [name]="projeto.coordenador" [tipo_papel]="'Coordenador'"></app-member-card>
+        </div>
+    </div>
+     <!--Membros-->
+     <div>
+        <div class="uk-margin-top">
+            <h3>Membros do Projeto</h3>
+        </div>
+        <div class="uk-grid">
+            <app-member-card *ngFor="let membro of projeto.membros"  [name]="membro.nome" [tipo_papel]="membro.tipo_papel" [image]="membro.foto"></app-member-card>
+        </div>
+    </div>
+</div>

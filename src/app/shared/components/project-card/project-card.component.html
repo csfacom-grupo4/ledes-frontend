@@ -8,10 +8,12 @@
         <p class="uk-margin-left uk-margin-right">Coordenador: {{ projeto.coordenador }}</p>
         <div class="uk-flex uk-flex-between uk-margin-left uk-margin-right">
             <div class="uk-flex tipo-status">
-                <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.status }}</div>
+                <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.situacao }}</div>
                 <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipo }}</div>
             </div>
-            <div>{{ projeto.dataInicio }}</div>
+           <div class="uk-flex"><div>{{ projeto.data_inicio }} </div><div class="" *ngIf="projeto.dataFim !== null">-{{ projeto.data_termino }}</div>
+              <div class="uk-text-left" *ngIf="projeto.data_termino === null">agora
+              </div></div> 
         </div>
     </div>
   </div>

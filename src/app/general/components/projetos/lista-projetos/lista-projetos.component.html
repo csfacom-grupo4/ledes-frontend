@@ -19,7 +19,7 @@
         
           <div>
                 <ul class="lista-projetos js-filter uk-grid " >
-                      <li *ngFor="let projeto of listaProjetos" [ngClass]="formatarClasseStatus(projeto.status)" class="todos">
+                      <li *ngFor="let projeto of listaProjetos" [ngClass]="formatarClasseStatus(projeto.situacao)" class="todos">
                             <app-project-card   [projeto]="projeto"></app-project-card>
                       </li>
                 </ul>

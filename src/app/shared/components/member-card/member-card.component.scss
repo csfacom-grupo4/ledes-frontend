@@ -4,10 +4,19 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: rem(16px);
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-  span {
+  .name {
     color: $main_black;
     align-self: center;
     font-size: rem(20px);
+  }
+  .texts-card{
+    display: flex;
+    align-items: center;
+  }
+  .texts-card-child{
   }
 }
