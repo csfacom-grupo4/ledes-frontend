@@ -1,0 +1,30 @@
+.titulo-funcionamento{
+    font-size: 20px;
+}
+.dia-hora tr td{
+    padding-inline: 5px;
+}
+.componente-ledes{
+    display: flex;
+}
+.dados-ledes{
+    width: 50%;
+    margin: 5px;
+}
+.mapa-ledes{
+    width: 50%;
+   
+    margin: 5px;
+}
+@media (max-width: 1024px) {
+    .componente-ledes{
+        display: grid;
+    }
+    .dados-ledes{
+        width: auto;
+       
+    }
+    .mapa-ledes{
+        width: auto;
+    }
+}

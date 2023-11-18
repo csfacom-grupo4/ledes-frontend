@@ -10,6 +10,7 @@ import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 import { ProjectCardComponent } from '../shared/components/project-card/project-card.component';
 import { ListaProjetosComponent } from './components/projetos/lista-projetos/lista-projetos.component';
 import { ProjetoComponent } from './components/projetos/projeto/projeto.component';
+import { ViewInfoLaboratorioComponent } from '../shared/components/view-info-laboratorio/view-info-laboratorio.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProjetoComponent } from './components/projetos/projeto/projeto.componen
     ProjectCardComponent,
     ListaProjetosComponent,
     ProjetoComponent,
+    ViewInfoLaboratorioComponent
   ],
   imports: [
     CommonModule,
