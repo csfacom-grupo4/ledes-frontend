@@ -6,6 +6,8 @@
 }
 .componente-ledes{
     display: flex;
+    height: auto;
+    min-width: 300px;
 }
 .dados-ledes{
     width: 50%;
@@ -16,15 +18,37 @@
    
     margin: 5px;
 }
+.map-responsive{
+    
+   
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    
+}
 @media (max-width: 1024px) {
     .componente-ledes{
-        display: grid;
+        display: inline;
+       min-width: 300px;
+      
     }
     .dados-ledes{
-        width: auto;
-       
+        width: 80%;
+        margin-inline: auto;
+        height: auto;
     }
     .mapa-ledes{
         width: auto;
+        height: 50vh;
+    }
+    .map-responsive{
+    display: flex;
+    margin-inline: auto;
+   height: 500px;
+   width: 80%;
     }
 }
