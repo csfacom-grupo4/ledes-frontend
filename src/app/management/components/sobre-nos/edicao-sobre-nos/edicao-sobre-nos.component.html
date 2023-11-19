@@ -1,1 +1,112 @@
-<p>edicao-sobre-nos works!</p>
+<div class="uk-container uk-margin-large-bottom">
+  <h1>Sobre Nós</h1>
+
+  <!-- Grid do UIkit -->
+  <div class="uk-child-width-1-2@m" uk-grid>
+    <!-- Container 1: Para a descrição -->
+    <div>
+      <div class="uk-margin">
+        <label class="uk-text-lead" for="descricao">Descrição:</label>
+        <div class="uk-margin">
+          <textarea class="uk-textarea" id="descricao" rows="10" style="width: 100%;" placeholder="Digite a descrição..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container 2: Para adição de imagem -->
+    <div>
+      <div class="uk-margin ">
+        <label class="uk-text-lead" for="imagem">Adicionar Imagem:</label>
+        <div class="uk-margin">
+          <!-- Input para upload de imagem -->
+          <input class="uk-input"  id="imagem" type="file">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uk-child-width-1-2@m" uk-grid>
+      <div>
+        <div class="uk-margin">
+          <label class="uk-text-lead" for="descricao">LABORATÓRIO DE ENGENHARIA DE SOFTWARE - LEDES:</label>
+          <div class="uk-margin">
+            <p>Endereço:</p>
+            <input class="uk-input" id="descricao" type="text" style="width: 100%;" placeholder="">
+            <p>Telefone:</p>
+            <input class="uk-input" id="descricao" type="text" style="width: 100%;" placeholder="">
+            <p>Coordenador:</p>
+            <input class="uk-input" id="descricao" type="text" style="width: 100%;" placeholder="">
+            <p>E-mail do Coordenador:</p>
+            <input class="uk-input" id="descricao" type="text" style="width: 100%;" placeholder="">
+            <div class="uk-margin"></div>
+
+            <label class="uk-text-lead" for="descricao">HORÁRIOS DE FUNCIONAMENTO:</label>
+            <div class="uk-margin"></div>
+            <div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Segunda-feira:</label>
+              <!-- Caixa de Texto -->
+              <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+              </div>
+            </div>
+            <div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Terça-feira:</label>
+
+              <!-- Caixa de Texto -->
+              <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+              </div>
+            </div><div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Quarta-feira:</label>
+
+              <!-- Caixa de Texto -->
+                  <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+                  </div>
+            </div><div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Quinta-feira:</label>
+
+              <!-- Caixa de Texto -->
+                  <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+                  </div>
+            </div><div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Sexta-feira:</label>
+
+              <!-- Caixa de Texto -->
+                  <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+                  </div>
+            </div><div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                  <label class="uk-text" for="caixa-de-texto">Sábado:</label>
+
+              <!-- Caixa de Texto -->
+                  <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+                  </div>
+            </div><div class="uk-child-width-1-3@m" uk-grid>
+              <!-- Texto -->
+                <label class="uk-text" for="caixa-de-texto">Domingo:</label>
+              <!-- Caixa de Texto -->
+                  <div class="uk-form-controls">
+                    <input class="uk-input" id="caixa-de-texto" type="text" placeholder="Digite algo...">
+                </div>
+
+        </div>
+
+
+      </div>
+
+  </div>
+
+  <div class="uk-position-fixed uk-position-bottom-right uk-margin-large-bottom uk-margin-large-right ">
+    <button class="uk-button uk-button-primary uk-margin-large-bottom" onclick="salvarDados()">Salvar</button>
+  </div>
+
+
+</div>

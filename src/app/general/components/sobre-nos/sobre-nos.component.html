@@ -1,4 +1,25 @@
-<div class="uk-margin-large-left uk-margin-large-right">
-    <div>componente de sobre nós</div>
-<app-view-info-laboratorio [sobreNos]="sobreNos"></app-view-info-laboratorio>
+ 
+<div class=" uk-margin-large-left uk-margin-large-right">
+    <h1>Sobre Nós</h1>
+
+  <!-- Quadros usando Grid do UIkit -->
+  <div class="uk-card uk-card-default uk-card-body uk-flex" >
+    <!-- Quadro 1: Descrição -->
+    <div>
+       <h3>Descrição</h3>
+        <p>Aqui vai o texto recuperado de gerenciar Laboratório </p>
+    </div>
+
+    <!-- Quadro 2: Imagem -->
+    <div>
+      
+        <h3>Imagem</h3>
+        <img src="caminho/para/imagem" alt="Imagem carregada anteriormente">
+     
+    </div>
+  </div>
+    <!-- Quadro 3: Endereço, Coordenador, Email, Telefone, Horários -->
+    <app-view-info-laboratorio [sobreNos]="sobreNos"></app-view-info-laboratorio>
+
+
 </div>
