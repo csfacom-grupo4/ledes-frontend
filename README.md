@@ -10,9 +10,9 @@ Este arquivo README fornece instruções sobre como rodar a aplicação Angular.
 
 Antes de começar, certifique-se de que você tem os seguintes pré-requisitos instalados em seu sistema:
 
-Node.js
-npm
-Angular CLI
+* Node.js
+* npm
+* Angular CLI
 
 Se você ainda não os instalou, você pode fazer isso seguindo as instruções em seus respectivos sites oficiais.
 
