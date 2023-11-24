@@ -17,6 +17,7 @@ export class ListaProjetosComponent {
     // Adicione mais projetos conforme necessário
   ]; // Aqui você preenche com os dados vindos do backend
   termoPesquisa: string = '';
+  
 
   filtrarProjetos(): any[] {
     if (!this.termoPesquisa.trim()) {

@@ -50,7 +50,10 @@
     </div>
     <div class="uk-margin">
       <label> Descrição do projeto </label>
-      <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>
+      <angular-editor [config]="editorConfig" [(ngModel)]="htmlContent"></angular-editor>
+    <!--  <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>-->
+      <h2>teste</h2>
+      {{htmlContent}}
     </div>
     <div class="uk-margin">
       <label> Coordenador do projeto </label>

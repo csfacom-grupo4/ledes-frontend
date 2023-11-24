@@ -1,5 +1,4 @@
 @import "../../../../../assets/scss/global";
-
 .cover-image-container {
   text-align: center;
 }
@@ -27,4 +26,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+
+.editor-texto{
+  height: 500px;
+  width: 500px;
+  display: flex;
 }

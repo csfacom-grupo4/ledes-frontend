@@ -12,6 +12,9 @@ import { ListaNoticiasComponent } from './components/noticias/lista-noticias/lis
 import { CadastroNoticiaComponent } from './components/noticias/cadastro-noticia/cadastro-noticia.component';
 import { EdicaoSobreNosComponent } from './components/sobre-nos/edicao-sobre-nos/edicao-sobre-nos.component';
 import { DadosPessoaisComponent } from './components/dados-pessoais/dados-pessoais.component';
+import { HttpClientModule} from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { DadosPessoaisComponent } from './components/dados-pessoais/dados-pessoa
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    AngularEditorModule
   ],
 })
 export class ManagementModule {}

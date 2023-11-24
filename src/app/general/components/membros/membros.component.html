@@ -1,1 +1,9 @@
-<p>membros works!</p>
+ <!--Membros-->
+ <div class="uk-margin-large-left uk-margin-large-right uk-margin-top">
+    <div class="uk-margin-top">
+        <h3>Membros</h3>
+    </div>
+    <div class="uk-grid">
+        <app-member-card *ngFor="let membro of membros"  [name]="membro.nome" [tipo_papel]="membro.tipo_papel" ></app-member-card>
+    </div>
+</div>
