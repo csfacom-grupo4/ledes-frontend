@@ -1,1 +1,126 @@
-<p>dados-pessoais works!</p>
+<div class="formulario">
+  <form (submit)="cadastrarUsuario()" #cadastroForm="ngForm">
+    <div class="avatar-container uk-margin-large-top">
+      <!-- Div circular para a imagem de perfil -->
+      <div class="avatar">
+        <img
+          [src]="imagemPerfil || './assets/default/default_profile.svg'"
+          alt="Imagem de Perfil"
+        />
+      </div>
+      <!-- Botão para selecionar arquivo de foto -->
+
+      <div class="js-upload uk-margin-top" uk-form-custom>
+        <input type="file" #fileInput accept="image/*" />
+        <button
+          class="uk-button uk-button-primary"
+          type="button"
+          tabindex="-1"
+          (click)="fileInput.click()"
+        >
+          Selecionar Imagem
+        </button>
+      </div>
+    </div>
+
+    <div class="questoes">
+      <div class="uk-margin-top">
+        <p class="uk-margin-top titulo">Dados Cadastrais</p>
+      </div>
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2">
+          <label for="nome">Nome</label>
+          <input class="uk-input" type="text" id="nome" name="nome" required />
+        </div>
+
+        <div class="uk-width-1-2 uk-margin-left">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            class="uk-input"
+            type="text"
+            id="sobrenome"
+            name="sobrenome"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="email">Email</label>
+          <input
+            class="uk-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="telefone">Telefone</label>
+          <input class="uk-input" type="tel" id="telefone" name="telefone" />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="linkedin">LinkedIn</label>
+          <input class="uk-input" type="text" id="linkedin" name="linkedin" />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="curso">Curso</label>
+          <input class="uk-input" type="text" id="curso" name="curso" />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="senha">Senha</label>
+          <input
+            class="uk-input"
+            type="password"
+            id="senha"
+            name="senha"
+            required
+          />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+
+      <div class="uk-flex uk-margin-top">
+        <div class="uk-width-1-2@m">
+          <label for="repetirSenha">Repetir Senha</label>
+          <input
+            class="uk-input"
+            type="password"
+            id="repetirSenha"
+            name="repetirSenha"
+            required
+          />
+        </div>
+        <div class="uk-width-1-2@m uk-visible@m uk-margin-left"></div>
+      </div>
+    </div>
+    <div class="buttons uk-margin-top">
+      <button
+        class="uk-button uk-modal-close"
+        type="button"
+        (click)="navigateBack()"
+      >
+        Cancelar
+      </button>
+      <button class="uk-button uk-button-primary uk-margin-left" type="submit">
+        Cadastrar
+      </button>
+    </div>
+  </form>
+</div>

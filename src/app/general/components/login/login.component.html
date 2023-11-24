@@ -6,7 +6,7 @@
       alt="Logo LEDES"
     />
     <span class="login__title uk-margin">Login</span>
-    <form class="login__fields" [formGroup]="loginForm">
+    <form class="login__fields">
       <div class="uk-margin">
         <input
           class="uk-input uk-form-small"
@@ -22,14 +22,13 @@
           type="password"
           placeholder="Senha"
           aria-label="Senha"
-          formControlName="password"
         />
       </div>
     </form>
     <button
       class="uk-button uk-margin uk-button-secondary"
       type="submit"
-      [disabled]="!loginForm.valid"
+      [disabled]="!form.valid"
       (click)="onSubmit()"
     >
       ENTRAR
