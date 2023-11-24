@@ -20,20 +20,26 @@ Se você ainda não os instalou, você pode fazer isso seguindo as instruções 
 
 Primeiro, você precisa clonar o repositório do projeto para o seu sistema local. Você pode fazer isso usando o seguinte comando no terminal:
 
+ ```
 git clone git@github.com:csfacom-grupo4/ledes-frontend.git
+ ```
 
 ## Instalando as dependências
 
 Depois de clonar o repositório, navegue até o diretório do projeto e instale as dependências usando o npm. Você pode fazer isso com o seguinte comando:
 
+ ```
 cd <DIRETORIO_DO_PROJETO>
 npm install
+ ```
 
 ## Rodando a aplicação
 
 Depois de instalar as dependências, você pode iniciar a aplicação usando o Angular CLI. Use o seguinte comando para iniciar o servidor de desenvolvimento:
 
+ ```
 ng serve
+ ```
 
 A aplicação agora estará rodando no http://localhost:4200/.
 
@@ -41,7 +47,9 @@ A aplicação agora estará rodando no http://localhost:4200/.
 
 Se você quiser construir a aplicação para produção, você pode usar o seguinte comando:
 
+ ```
 ng build --prod
+ ```
 
 Os arquivos de construção estarão localizados no diretório dist/.
 
@@ -49,8 +57,14 @@ Os arquivos de construção estarão localizados no diretório dist/.
 
 Para executar os testes unitários da aplicação, você pode usar o seguinte comando:
 
+```
 ng test
+```
 
 Para executar os testes de ponta a ponta, você pode usar o seguinte comando:
 
-Por favor, reporte quaisquer problemas que você encontrar abrindo um problema no GitHub.
+ ```
+ng e2e
+ ```
+
+
