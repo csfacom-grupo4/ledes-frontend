@@ -1,5 +1,5 @@
 <div class="container uk-container">
-  <h2 class="uk-margin-small-top">Adicionar publicação</h2>
+  <h2 class="uk-margin-small-top">Adicionar notícia</h2>
   <div class="cover-image-container uk-margin-large-top">
     <div class="cover-image">
       <img *ngIf="imagemProjeto" [src]="imagemProjeto" alt="Imagem de Capa" />
@@ -18,14 +18,14 @@
         tabindex="-1"
         (click)="fileInput.click()"
       >
-        Definir imagem da publicação
+        Definir imagem da notícia
       </button>
     </div>
   </div>
 
   <form class="content-container uk-margin-large">
     <div class="uk-margin">
-      <label> Título da publicação </label>
+      <label> Título da notícia </label>
       <input class="uk-input" type="text" aria-label="Input" />
     </div>
     <!-- <div class="uk-margin date-fields">
@@ -49,7 +49,7 @@
       </div>
     </div> -->
     <div class="uk-margin">
-      <label> Corpo da publicação </label>
+      <label> Corpo da notícia </label>
       <angular-editor
         [config]="editorConfig"
         [(ngModel)]="htmlContent"
