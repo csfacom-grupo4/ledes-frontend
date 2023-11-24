@@ -8,26 +8,18 @@ import { Router } from '@angular/router';
 })
 export class ListaNoticiasComponent {
   projetos = [
-    'Projeto Armadura Dourada',
-    'Projeto Infinito',
-    'Projeto O Massacre',
-    'Projeto Planeta Hulk',
-    'Projeto Guerra Civil',
-    'Projeto A Queda de Murdock',
-    'Projeto Guerra Infinita',
-    'Projeto Guerra Secreta',
-    'Projeto Reinado Sombrio',
-    'Projeto Dinastia M',
-    'Projeto Cerco',
-    'Projeto A Noite Mais Densa',
-    'Projeto Aniquilação',
-    'Projeto Império Secreto',
-    'Projeto Reino do Amanhã',
-    'Projeto A Era de Apocalipse',
-    'Projeto Guerra Kree-Skrull',
-    'Projeto Operação: Insurgência',
-    'Projeto Planeta Solitário',
-    'Projeto Dizimação',
+    'Galactus Retorna para Devorar a Terra!',
+    'Os Vingadores Enfrentam uma Nova Ameaça Cósmica',
+    'Doutor Estranho Desvenda um Novo Reino Místico',
+    'Loki Trai Novamente e Desencadeia o Caos',
+    'Os X-Men Lutam contra uma Mutação Descontrolada',
+    'Capitã Marvel Encara um Inimigo do Passado',
+    'Pantera Negra Assume o Controle de Wakanda',
+    'Hulk Enfrenta uma Transformação Incontrolável',
+    'O Surgimento de um Novo Vilão: O Conquistador Temporal',
+    'Os Guardiões da Galáxia em uma Missão Interplanetária',
+    'Homem-Aranha Enfrenta um Enigma no Submundo de Nova York',
+    'Wanda Maximoff Explora seus Poderes Dimensionais',
   ];
 
   constructor(private router: Router) {}
