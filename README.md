@@ -1,5 +1,10 @@
 # Portal LEDES - Frontend - Grupo 4 - Construção de Software 
 
+Professor: Ricardo M. Kondo
+Aluno: Lucas R. Marques (Back-End)
+Aluno: Tiago M. Varmassera (Front-End)
+Aluno: Guilherme Lorentz (Front-End)
+
 Esse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 16.2.1.
 
 ## Instruções
