@@ -1,27 +1,56 @@
-# LedesFrontend
+# Portal LEDES - Frontend - Grupo 4 - Construção de Software 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Esse projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 16.2.1.
 
-## Development server
+## Instruções
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este arquivo README fornece instruções sobre como rodar a aplicação Angular.
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, certifique-se de que você tem os seguintes pré-requisitos instalados em seu sistema:
 
-## Build
+Node.js
+npm
+Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Se você ainda não os instalou, você pode fazer isso seguindo as instruções em seus respectivos sites oficiais.
 
-## Running unit tests
+## Clonando o repositório
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Primeiro, você precisa clonar o repositório do projeto para o seu sistema local. Você pode fazer isso usando o seguinte comando no terminal:
 
-## Running end-to-end tests
+git clone git@github.com:csfacom-grupo4/ledes-frontend.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalando as dependências
 
-## Further help
+Depois de clonar o repositório, navegue até o diretório do projeto e instale as dependências usando o npm. Você pode fazer isso com o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+cd <DIRETORIO_DO_PROJETO>
+npm install
+
+## Rodando a aplicação
+
+Depois de instalar as dependências, você pode iniciar a aplicação usando o Angular CLI. Use o seguinte comando para iniciar o servidor de desenvolvimento:
+
+ng serve
+
+A aplicação agora estará rodando no http://localhost:4200/.
+
+## Construindo a aplicação para produção
+
+Se você quiser construir a aplicação para produção, você pode usar o seguinte comando:
+
+ng build --prod
+
+Os arquivos de construção estarão localizados no diretório dist/.
+
+## Testando a aplicação
+
+Para executar os testes unitários da aplicação, você pode usar o seguinte comando:
+
+ng test
+
+Para executar os testes de ponta a ponta, você pode usar o seguinte comando:
+
+Por favor, reporte quaisquer problemas que você encontrar abrindo um problema no GitHub.
