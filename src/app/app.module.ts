@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ManagementModule } from './management/management.module';
 import { GeneralModule } from './general/general.module';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +20,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     GeneralModule,
     SharedModule,
     HttpClientModule,
-    AngularEditorModule
+    AngularEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

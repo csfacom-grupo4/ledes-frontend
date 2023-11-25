@@ -1,6 +1,5 @@
-import { StorageService } from './../../../shared/services/storage.service';
-import { AuthService } from './../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,47 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  form: any = {
-    username: null,
-    password: null,
-  };
-  isLoggedIn = false;
-  isLoginFailed = false;
-  errorMessage = '';
-  roles: string[] = [];
+  loginForm!: FormGroup;
+  constructor(private fb: FormBuilder) {}
 
-  constructor(
-    private authService: AuthService,
-    private storageService: StorageService
-  ) {}
-
-  ngOnInit(): void {
-    if (this.storageService.isLoggedIn()) {
-      this.isLoggedIn = true;
-      this.roles = this.storageService.getUser().roles;
-    }
-  }
-
-  onSubmit(): void {
-    const { username, password } = this.form;
-
-    this.authService.login(username, password).subscribe({
-      next: (data) => {
-        this.storageService.saveUser(data);
-
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.roles = this.storageService.getUser().roles;
-        this.reloadPage();
-      },
-      error: (err) => {
-        this.errorMessage = err.error.message;
-        this.isLoginFailed = true;
-      },
+  ngOnInit() {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.email, Validators.required]],
+      password: ['', [Validators.minLength(6), Validators.required]],
     });
   }
 
-  reloadPage(): void {
-    window.location.reload();
+  onSubmit() {
+    console.log(this.loginForm.value);
   }
 }
