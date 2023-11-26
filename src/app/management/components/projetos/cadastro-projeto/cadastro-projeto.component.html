@@ -1,1 +1,123 @@
-<p>cadastro-projeto works!</p>
+<div class="container uk-container">
+  <h2 class="uk-margin-small-top">Adicionar projeto</h2>
+  <div class="cover-image-container uk-margin-large-top">
+    <div class="cover-image">
+      <img *ngIf="imagemProjeto" [src]="imagemProjeto" alt="Imagem de Capa" />
+    </div>
+
+    <div class="js-upload uk-margin-top" uk-form-custom>
+      <input
+        type="file"
+        #fileInput
+        (change)="onFileSelected($event)"
+        accept="image/*"
+      />
+      <button
+        class="uk-button uk-button-secondary"
+        type="button"
+        tabindex="-1"
+        (click)="fileInput.click()"
+      >
+        Definir imagem de capa
+      </button>
+    </div>
+  </div>
+
+  <form class="content-container uk-margin-large">
+    <div class="uk-margin">
+      <label> Título do projeto </label>
+      <input class="uk-input" type="text" aria-label="Input" />
+    </div>
+    <div class="uk-margin date-fields">
+      <div>
+        <label> Data de início </label>
+        <input
+          class="uk-input"
+          type="date"
+          placeholder="Data de início"
+          aria-label="Input"
+        />
+      </div>
+      <div>
+        <label> Data de término </label>
+        <input
+          class="uk-input"
+          type="date"
+          placeholder="Data de término"
+          aria-label="Input"
+        />
+      </div>
+    </div>
+    <div class="uk-margin">
+      <label> Descrição do projeto </label>
+      <angular-editor [config]="editorConfig" [(ngModel)]="htmlContent"></angular-editor>
+    <!--  <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>-->
+    
+    </div>
+    <div class="uk-margin">
+      <label> Coordenador do projeto </label>
+      <select class="uk-select" aria-label="Select">
+        <option>Option 01</option>
+        <option>Option 02</option>
+        <option>Option 03</option>
+      </select>
+    </div>
+    <div class="uk-margin date-fields">
+      <div>
+        <label>Situação</label>
+        <select class="uk-select" aria-label="Select">
+          <option>Em andamento</option>
+          <option>Concluído</option>
+          <option>Descontinuado</option>
+        </select>
+      </div>
+      <div>
+        <label> Tipo de projeto </label>
+        <select class="uk-select" aria-label="Select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+          <option>Option 03</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <h2 class="uk-margin-large-top">Adicionar membros</h2>
+  <div class="content-container uk-margin-medium-bottom">
+    <app-list-card
+      *ngFor="let membro of membros"
+      [text]="membro"
+    ></app-list-card>
+    <a
+      class="uk-button uk-button-primary uk-margin"
+      href="#modal-sections"
+      uk-toggle
+      >Adicionar membro</a
+    >
+  </div>
+</div>
+
+<div id="modal-sections" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Modal Title</h2>
+    </div>
+    <div class="uk-modal-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-default uk-modal-close" type="button">
+        Cancel
+      </button>
+      <button class="uk-button uk-button-primary" type="button">Save</button>
+    </div>
+  </div>
+</div>

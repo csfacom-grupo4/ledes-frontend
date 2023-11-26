@@ -1,1 +1,14 @@
-<p>lista-noticias works!</p>
+<div class="container uk-container">
+  <div class="list">
+    <div class="list__title">Gerenciar notícias</div>
+    <button class="uk-button uk-button-primary uk-margin" (click)="navigate()">
+      Adicionar notícia
+    </button>
+    <div class="list__content uk-margin">
+      <app-list-card
+        *ngFor="let projeto of projetos"
+        [text]="projeto"
+      ></app-list-card>
+    </div>
+  </div>
+</div>

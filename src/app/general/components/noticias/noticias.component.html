@@ -1,1 +1,114 @@
-<p>noticias works!</p>
+<div class="uk-container">
+  <div
+    class="uk-position-relative uk-visible-toggle uk-light"
+    tabindex="-1"
+    uk-slideshow="animation: slide; autoplay: true; ratio: 7:3"
+  >
+    <ul class="uk-slideshow-items">
+      <li *ngFor="let noticia of noticias">
+        <img [src]="noticia.image" alt="" uk-cover />
+        <div
+          class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"
+        >
+          <h3 class="uk-margin-remove uk-text-left">{{ noticia.title }}</h3>
+          <p class="uk-margin-remove uk-text-left">{{ noticia.description }}</p>
+        </div>
+      </li>
+    </ul>
+
+    <a
+      class="uk-position-center-left uk-position-small uk-hidden-hover"
+      href
+      uk-slidenav-previous
+      uk-slideshow-item="previous"
+    ></a>
+    <a
+      class="uk-position-center-right uk-position-small uk-hidden-hover"
+      href
+      uk-slidenav-next
+      uk-slideshow-item="next"
+    ></a>
+  </div>
+  <div class="title">Notícias</div>
+  <ul uk-accordion class="uk-margin uk-margin-large-bottom">
+    <li class="uk-open">
+      <a class="uk-accordion-title" href>Item 1</a>
+      <div class="uk-accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 2</a>
+      <div class="uk-accordion-content">
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          reprehenderit.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+    <li>
+      <a class="uk-accordion-title" href>Item 3</a>
+      <div class="uk-accordion-content">
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          proident.
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>

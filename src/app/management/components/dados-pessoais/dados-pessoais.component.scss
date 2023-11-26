@@ -1,0 +1,166 @@
+/* Estilo para a imagem de perfil circular */
+.formulario {
+  display: flex;
+  height: auto;
+  width: auto;
+  margin-inline: 10%;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.avatar-container {
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #e4e4e4;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Estilos para o botão personalizado */
+.custom-file-input-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo hover para o botão (opcional) */
+.custom-file-input-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para o restante do formulário */
+form {
+  width: 70%;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  margin-bottom: 5px;
+  color: black;
+}
+.titulo {
+  display: flex;
+  font-size: 20px;
+  color: black;
+}
+
+/*input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black;
+  }*/
+/* Estilos para os switches */
+.switch-group {
+  display: inline;
+}
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.switch input[type="checkbox"] {
+  transform: scale(1.5); /* Tamanho do switch */
+}
+
+/* -----------------------------
+  Switch */
+
+.uk-switch {
+  position: relative;
+  display: flex;
+  height: 24px;
+  width: 48px;
+}
+
+/* Hide default HTML checkbox */
+.uk-switch input {
+  display: none;
+}
+/* Slider */
+.uk-switch-slider {
+  background-color: rgba(0, 0, 0, 0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 500px;
+  bottom: 0;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.07);
+}
+/* Switch pointer */
+.uk-switch-slider:before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 2px;
+  bottom: 1px;
+  border-radius: 50%;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s;
+}
+/* Slider active color */
+input:checked + .uk-switch-slider {
+  background-color: #39f !important;
+}
+/* Pointer active animation */
+input:checked + .uk-switch-slider:before {
+  transform: translateX(23px);
+}
+
+/* Modifiers */
+.uk-switch-slider.uk-switch-on-off {
+  background-color: #c7c6c6;
+}
+input:checked + .uk-switch-slider.uk-switch-on-off {
+  background-color: #0a9763 !important;
+}
+
+/* Style Modifier */
+.uk-switch-slider.uk-switch-big:before {
+  transform: scale(1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
+}
+.uk-switch-slider.uk-switch-small:before {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
+}
+input:checked + .uk-switch-slider.uk-switch-big:before {
+  transform: translateX(26px) scale(1.2);
+}
+
+/* Inverse Modifier - affects only default */
+.uk-light .uk-switch-slider:not(.uk-switch-on-off) {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

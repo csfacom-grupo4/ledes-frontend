@@ -10,6 +10,7 @@ import { CircleButtonComponent } from './shared/components/circle-button/circle-
 import { FormUnitarioPapelVinculoComponent } from './shared/components/form-unitario-papel-vinculo/form-unitario-papel-vinculo.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo-pesquisa.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListCardComponent,
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
+    CampoPesquisaComponent
   ],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -30,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListCardComponent,
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
+    CampoPesquisaComponent
   ],
 })
 export class SharedModule {}
