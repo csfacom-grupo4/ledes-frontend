@@ -9,6 +9,7 @@ import { ManagementModule } from './management/management.module';
 import { GeneralModule } from './general/general.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { httpInterceptorProviders } from './shared/helpers/http.interceptor';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +23,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     HttpClientModule,
     AngularEditorModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
