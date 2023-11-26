@@ -30,5 +30,8 @@ import { ViewInfoLaboratorioComponent } from '../shared/components/view-info-lab
     FormsModule,
     ReactiveFormsModule,
   ],
+  exports: [
+    NoticiasComponent
+  ]
 })
 export class GeneralModule {}
