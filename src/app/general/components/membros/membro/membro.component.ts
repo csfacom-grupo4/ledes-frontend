@@ -18,8 +18,7 @@ export class MembroComponent implements OnInit {
       this.membro =
         { id: 1, nome: 'João', sobrenome: 'José da Silva',  vinculo: 'Bolsista', curso: 'Engenharia de Software',
          email: 'jjsilva@ufms.br',
-         coordenador: 'Prof. Ricardo Kondo', situacao: 'EM ANDAMENTO', tipo: 'EXTENSÃO', imagem: '',
-      membros:[{id:1, nome:'Tiago', tipo_papel: 'Eng de Software', foto: null}, {id:2, nome:'Vitor', tipo_papel: 'Eng de Software', foto: null},{id:2, nome:'Joao', tipo_papel: 'Eng de Software', foto: null} ]
+         projetos:[{id:1, foto:null, titulo: 'Projeto de teste', coordenador: 'Prof. Ricardo Kondo'}, {id:3, foto:null, titulo: 'Projeto de desenvolvimento de software sobre algum tema', coordenador: 'Prof. Ricardo Kondo'},{id:4, foto:null, titulo: 'Projeto de desenvolvimento de software sobre algum tema', coordenador: 'Prof. Ricardo Kondo'} ]
       };
 
 
