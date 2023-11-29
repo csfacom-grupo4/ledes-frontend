@@ -5,13 +5,30 @@
         <img [src]="'./assets/default/default_profile.svg'" alt="Imagem de Perfil" />
       </div>
       <h2>{{ membro.nome }} {{ membro.sobrenome }}</h2>
+
+      <div class="text-center mt-3">
+        <a href="https://linkedin.com/in/{{ membro.linkedin }}" target="_blank" class="uk-button uk-button-primary uk-margin-small-right">LinkedIn</a>
+        <a href="https://github.com/{{ membro.github }}" target="_blank" class="uk-button uk-button-secondary ">GitHub</a>
+      </div>
     </div>
+
   </div>
 
-  <div class="uk-margin-top-left mt-4">
+  <div class="uk-margin-top-left">
     <div class="uk-text">{{ membro.vinculo }}</div>
     <div class="uk-text">Curso: {{ membro.curso }}</div>
     <div class="uk-text">E-mail: {{ membro.email }}</div>
+  </div>
+
+  <div class="uk-margin uk-margin-top-left">
+    <h3 class="uk-margin-top-left">Projetos</h3>
+    <ul class="uk-list uk-margin-left">
+      <li class="uk-margin" *ngFor="let projeto of membro.projetos">
+        <div class="uk-text-bold">{{ projeto.titulo }}</div>
+        <div class="uk-text">{{ projeto.inicio }} - {{ projeto.fim}}</div>
+          <div class="uk-text">{{ projeto.vinculo}}</div>
+      </li>
+    </ul>
   </div>
 
   <div class="mt-4">
