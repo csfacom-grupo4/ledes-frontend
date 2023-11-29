@@ -20,7 +20,7 @@ import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo
     ListCardComponent,
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
-    CampoPesquisaComponent
+    CampoPesquisaComponent,
   ],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -32,7 +32,7 @@ import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo
     ListCardComponent,
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
-    CampoPesquisaComponent
+    CampoPesquisaComponent,
   ],
 })
 export class SharedModule {}

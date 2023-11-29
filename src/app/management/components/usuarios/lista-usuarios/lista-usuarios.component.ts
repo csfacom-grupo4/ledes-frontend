@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../shared/services/auth.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -30,7 +31,14 @@ export class ListaUsuariosComponent {
     'Karl Mordo',
   ];
 
-  constructor(private router: Router) {}
+  ngOnInit() {
+    this.authService.getUsers().subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error),
+    });
+  }
+
+  constructor(private router: Router, private authService: AuthService) {}
 
   navigate() {
     this.router.navigate(['management/cadastrar-usuario']);
