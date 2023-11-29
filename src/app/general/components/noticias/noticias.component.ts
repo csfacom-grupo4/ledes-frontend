@@ -26,9 +26,10 @@ export class NoticiasComponent {
         }
       },
     {
+
       id: 2,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
-      titulo: 'Título 2',
+      titulo: 'Os Vingadores Enfrentam uma Nova Ameaça Cósmica',
       corpo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       destaque: true,
       thumbnail:
@@ -42,10 +43,11 @@ export class NoticiasComponent {
     {
       id: 3,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
-      titulo: 'Título 3',
+      titulo: 'Doutor Estranho Desvenda um Novo Reino Místico',
       corpo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       destaque: true,
       thumbnail:
+
         'https://images.unsplash.com/photo-1605235904827-2fc511a86dd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80',
       dataAgendamento: "2023-01-12T00:00:00.000Z",
       usuario: {
@@ -56,7 +58,7 @@ export class NoticiasComponent {
     {
       id: 4,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
-      titulo: 'Título 4',
+      titulo: 'Loki Trai Novamente e Desencadeia o Caos',
       corpo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       destaque: false,
       thumbnail:
@@ -70,7 +72,7 @@ export class NoticiasComponent {
     {
       id: 5,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
-      titulo: 'Título 5',
+      titulo: 'Os X-Men Lutam contra uma Mutação Descontrolada',
       corpo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       destaque: true,
       thumbnail:

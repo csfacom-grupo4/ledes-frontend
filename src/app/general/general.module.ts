@@ -11,17 +11,20 @@ import { ProjectCardComponent } from '../shared/components/project-card/project-
 import { ListaProjetosComponent } from './components/projetos/lista-projetos/lista-projetos.component';
 import { ProjetoComponent } from './components/projetos/projeto/projeto.component';
 import { ViewInfoLaboratorioComponent } from '../shared/components/view-info-laboratorio/view-info-laboratorio.component';
+import { MembroComponent } from './components/membros/membro/membro.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     NoticiasComponent,
     MembrosComponent,
+    MembroComponent,
     SobreNosComponent,
     ProjectCardComponent,
     ListaProjetosComponent,
     ProjetoComponent,
-    ViewInfoLaboratorioComponent
+    ViewInfoLaboratorioComponent,
+    MembroComponent
   ],
   imports: [
     CommonModule,
@@ -30,5 +33,8 @@ import { ViewInfoLaboratorioComponent } from '../shared/components/view-info-lab
     FormsModule,
     ReactiveFormsModule,
   ],
+  exports: [
+    NoticiasComponent
+  ]
 })
 export class GeneralModule {}

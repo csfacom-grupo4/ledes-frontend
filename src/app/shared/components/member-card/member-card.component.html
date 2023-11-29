@@ -5,15 +5,16 @@
       width="72"
       height="72"
       [src]="image || 'https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3F1YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'"
- 
+
       alt="Avatar"
     />
     <div class="texts-card">
         <div class="texts-card-child">
-          <!--criar vaeriavel com id do membro e gerar link para acessar o perfil do membro-->
-         <a> <div class="name uk-width-1-1" [title]="name">{{ name }}</div></a>
+          <a [routerLink]="['/general/membros', id]">
+            <div class="name uk-width-1-1" [title]="name">{{ name }}</div>
+          </a>
           <div class="papel uk-width-1-1" [title]="tipo_papel">{{ tipo_papel }}</div>
+        </div>
       </div>
     </div>
-  </div>
 
