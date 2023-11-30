@@ -25,4 +25,8 @@ export class PapeisService {
   editarPapel(id: number, nome: string): Observable<any> {
     return this.http.patch(`${this.PAPEIS}/edit/${id}`, nome);
   }
+
+  deletarPapel(id: number): Observable<any> {
+    return this.http.delete(`${this.PAPEIS}/delete/${id}`);
+  }
 }
