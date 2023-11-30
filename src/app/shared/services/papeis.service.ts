@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Papel } from '../interfaces/papel';
 
 @Injectable({
   providedIn: 'root',
@@ -10,23 +11,23 @@ export class PapeisService {
 
   constructor(private http: HttpClient) {}
 
-  listarPapeis(): Observable<any> {
-    return this.http.get(`${this.PAPEIS}/list`);
+  listarPapeis(): Observable<Papel[]> {
+    return this.http.get<Papel[]>(`${this.PAPEIS}/list`);
   }
 
-  verPapel(id: number): Observable<any> {
-    return this.http.get(`${this.PAPEIS}/view/${id}`);
+  verPapel(id: number): Observable<Papel> {
+    return this.http.get<Papel>(`${this.PAPEIS}/view/${id}`);
   }
 
-  criarPapel(nome: string): Observable<any> {
-    return this.http.post(`${this.PAPEIS}/add`, nome);
+  criarPapel(nome: string): Observable<Papel> {
+    return this.http.post<Papel>(`${this.PAPEIS}/add`, nome);
   }
 
-  editarPapel(id: number, nome: string): Observable<any> {
-    return this.http.patch(`${this.PAPEIS}/edit/${id}`, nome);
+  editarPapel(id: number, nome: string): Observable<Papel> {
+    return this.http.patch<Papel>(`${this.PAPEIS}/edit/${id}`, nome);
   }
 
-  deletarPapel(id: number): Observable<any> {
-    return this.http.delete(`${this.PAPEIS}/delete/${id}`);
+  deletarPapel(id: number): Observable<unknown> {
+    return this.http.delete<Papel>(`${this.PAPEIS}/delete/${id}`);
   }
 }
