@@ -11,6 +11,7 @@ import { FormUnitarioPapelVinculoComponent } from './shared/components/form-unit
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo-pesquisa.component';
+import { ListCardNoticiaComponent } from './shared/components/list-card-noticia/list-card-noticia.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -21,6 +22,7 @@ import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
     CampoPesquisaComponent,
+    ListCardNoticiaComponent
   ],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -33,6 +35,7 @@ import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
     CampoPesquisaComponent,
+    ListCardNoticiaComponent
   ],
 })
 export class SharedModule {}
