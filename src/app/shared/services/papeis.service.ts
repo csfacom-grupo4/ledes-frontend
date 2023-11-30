@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 import { Papel } from '../interfaces/papel';
 
 @Injectable({
@@ -12,7 +12,23 @@ export class PapeisService {
   constructor(private http: HttpClient) {}
 
   listarPapeis(): Observable<Papel[]> {
-    return this.http.get<Papel[]>(`${this.PAPEIS}/list`);
+    return this.http.get<any>(`${this.PAPEIS}/list`).pipe(
+      map((response) => {
+        if (response && response.data) {
+          return response.data as Papel[];
+        } else {
+          console.error(
+            'Resposta do backend não possui a propriedade "data".',
+            response
+          );
+          return [];
+        }
+      }),
+      catchError((error) => {
+        console.error('Erro ao obter os papéis:', error);
+        throw error;
+      })
+    );
   }
 
   verPapel(id: number): Observable<Papel> {

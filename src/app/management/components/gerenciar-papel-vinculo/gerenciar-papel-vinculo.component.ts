@@ -1,3 +1,4 @@
+import { Papel } from './../../../shared/interfaces/papel';
 import { PapeisService } from './../../../shared/services/papeis.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,14 +15,21 @@ export class GerenciarPapelVinculoComponent implements OnInit {
   }
 
   vinculos = ['estagiário', 'extensão'];
-  papeis = ['desenvolvedor', 'gerente de projetos'];
+  papeis!: Papel[];
   constructor(private router: Router, private papeisService: PapeisService) {}
 
   ngOnInit() {
-    this.papeisService.listarPapeis().subscribe({});
+    this.papeisService.listarPapeis().subscribe({
+      next: (papeis) => (this.papeis = papeis),
+    });
   }
 
   navigate() {
     this.router.navigate(['/management/gerenciar-papeis-e-vinculos']);
+  }
+
+  removerPapel(id: number) {
+    console.log(id);
+    this.papeisService.deletarPapel(id).subscribe();
   }
 }
