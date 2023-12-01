@@ -32,7 +32,8 @@ export class ProjetoService {
   }
 
   verProjeto(id: number): Observable<Projeto> {
-    return this.http.get<Projeto>(`${this.PROJETOS}/view/${id}`);
+    return this.http.get<any>(`${this.PROJETOS}/view/${id}`)
+    .pipe(map((response) => response.data));
   }
 
   criarProjeto(nome: string): Observable<Projeto> {

@@ -13,9 +13,9 @@
   />
   <div class="texts-card">
     <div class="texts-card-child">
-      <div class="name uk-width-1-1" [title]="name">{{ name }}</div>
-      <div class="papel uk-width-1-1" [title]="tipo_papel">
-        {{ tipo_papel }}
+      <div class="name uk-width-1-1" [title]="name?.nome">{{ name?.nome }}</div>
+      <div class="papel uk-width-1-1" [title]="tipo_papel.name">
+        {{ tipo_papel.nome }}
       </div>
     </div>
   </div>
