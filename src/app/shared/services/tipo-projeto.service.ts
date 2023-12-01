@@ -6,12 +6,12 @@ import { TipoProjeto } from '../interfaces/tipo-projeto';
 @Injectable({
   providedIn: 'root',
 })
-export class TiposProjetosService {
+export class TipoProjetoService {
   TIPO_PROJETOS = 'http://18.220.17.233:2077/api/tipo-projetos';
 
   constructor(private http: HttpClient) {}
 
-  listarTiposProjetos(): Observable<TipoProjeto[]> {
+  listarTiposProjeto(): Observable<TipoProjeto[]> {
     return this.http.get<any>(`${this.TIPO_PROJETOS}/list`).pipe(
       map((response) => {
         if (response && response.data) {
@@ -41,14 +41,14 @@ export class TiposProjetosService {
     });
   }
 
-  editarTiposProjetos(id: number, nome: string): Observable<TipoProjeto> {
+  editarTipoProjeto(id: number, nome: string): Observable<TipoProjeto> {
     return this.http.patch<TipoProjeto>(
       `${this.TIPO_PROJETOS}/edit/${id}`,
       nome
     );
   }
 
-  deletarTiposProjetos(id: number): Observable<unknown> {
+  deletarTipoProjeto(id: number): Observable<unknown> {
     return this.http.delete<unknown>(`${this.TIPO_PROJETOS}/delete/${id}`, {
       withCredentials: true,
     });

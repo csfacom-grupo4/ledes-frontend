@@ -1,4 +1,6 @@
-import { TiposProjetosService } from './../../../../shared/services/tipos-projeto.service';
+import { SituacaoProjetoService } from './../../../../shared/services/situacao-projeto.service';
+import { SituacaoProjeto } from './../../../../shared/interfaces/situacao-projeto';
+import { TipoProjetoService } from '../../../../shared/services/tipo-projeto.service';
 import { TipoProjeto } from './../../../../shared/interfaces/tipo-projeto';
 import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
@@ -10,13 +12,19 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 export class CadastroProjetoComponent implements OnInit {
   conteudo: string = ''; // Conteúdo do editor
   tipos!: TipoProjeto[];
-  situacoes!: any[];
+  situacoes!: SituacaoProjeto[];
 
-  constructor(private tiposProjetosService: TiposProjetosService) {}
+  constructor(
+    private tipoProjetoService: TipoProjetoService,
+    private situacaoProjetoService: SituacaoProjetoService
+  ) {}
 
   ngOnInit(): void {
-    this.tiposProjetosService.listarTiposProjetos().subscribe({
+    this.tipoProjetoService.listarTiposProjeto().subscribe({
       next: (tipos) => (this.tipos = tipos),
+    });
+    this.situacaoProjetoService.listarSituacoesProjeto().subscribe({
+      next: (situacoes) => (this.situacoes = situacoes),
     });
   }
 
