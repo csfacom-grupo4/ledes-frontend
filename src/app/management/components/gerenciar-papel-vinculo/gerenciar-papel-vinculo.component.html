@@ -8,24 +8,23 @@
         <app-form-unitario-papel-vinculo
           buttonText="Adicionar vínculo"
           placeholderText="Digite o tipo de vínculo"
-          apiURL="https://sua-api.com/endpoint"
+          apiURL="http://18.220.17.233:2077/api/tipo-papeis/add"
           (onSubmit)="handleFormSubmit($event)"
         ></app-form-unitario-papel-vinculo>
 
         <app-list-card
           [isEdit]="false"
           *ngFor="let vinculo of vinculos"
-          [text]="vinculo"
+          [text]="vinculo.nome!"
         ></app-list-card>
       </div>
       <div class="uk-margin uk-margin-large-top">
         <app-form-unitario-papel-vinculo
           buttonText="Adicionar papel"
           placeholderText="Digite o tipo de papel"
-          apiURL="https://sua-api.com/endpoint"
-          (onSubmit)="handleFormSubmit($event)"
+          apiURL="http://18.220.17.233:2077/api/tipo-papeis/add"
+          (onSubmit)="adicionarPapel($event)"
         ></app-form-unitario-papel-vinculo>
-
         <app-list-card
           (buttonDelete)="removerPapel(papel.id!)"
           [isEdit]="false"

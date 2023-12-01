@@ -36,7 +36,7 @@ export class PapeisService {
   }
 
   criarPapel(nome: string): Observable<Papel> {
-    return this.http.post<Papel>(`${this.PAPEIS}/add`, nome);
+    return this.http.post<Papel>(`${this.PAPEIS}/add`, { nome: nome });
   }
 
   editarPapel(id: number, nome: string): Observable<Papel> {
@@ -44,6 +44,8 @@ export class PapeisService {
   }
 
   deletarPapel(id: number): Observable<unknown> {
-    return this.http.delete<Papel>(`${this.PAPEIS}/delete/${id}`);
+    return this.http.delete<unknown>(`${this.PAPEIS}/delete/${id}`, {
+      withCredentials: true,
+    });
   }
 }
