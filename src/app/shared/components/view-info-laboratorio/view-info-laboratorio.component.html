@@ -1,9 +1,9 @@
 <div class="componente-ledes uk-card uk-card-default">
     <div class="dados-ledes">
         <h3>LABORATÓRIO DE ENGENHARIA DE SOFTWARE - LEDES</h3>
-        <p>Telefone: {{sobreNos.telefoneLaboratorio}}</p>
-        <p>Coordenador: {{sobreNos.coordenadorLaboratorio}}</p>
-        <p>E-mail do coordenador: {{sobreNos.emailCoordenador}}</p>
+        <p>Telefone: {{ sobreNos?.telefoneLaboratorio }}</p>
+        <p>Coordenador: {{sobreNos?.coordenadorLaboratorio}}</p>
+        <p>E-mail do coordenador: {{sobreNos?.emailCoordenador}}</p>
         <div>
             <div>
                 <p class="titulo-funcionamento">Horário de funcionamento</p>
@@ -12,38 +12,38 @@
                 <table class="dia-hora">   
                     <tr>
                         <td>segunda-feira</td>
-                        <td *ngIf="sobreNos.segundaLaboratorioAbre">{{ sobreNos.horarioSegundaAbertura}} - {{sobreNos.horarioSegundaFechamento}}</td>
-                        <td *ngIf="!sobreNos.segundaLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.segundaLaboratorioAbre">{{ sobreNos?.horarioSegundaAbertura}} - {{sobreNos?.horarioSegundaFechamento}}</td>
+                        <td *ngIf="!sobreNos?.segundaLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>terça-feira</td>
-                        <td *ngIf="sobreNos.tercaLaboratorioAbre">{{ sobreNos.horarioTercaAbertura}} - {{sobreNos.horarioTercaFechamento}}</td>
-                        <td *ngIf="!sobreNos.tercaLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.tercaLaboratorioAbre">{{ sobreNos?.horarioTercaAbertura}} - {{sobreNos?.horarioTercaFechamento}}</td>
+                        <td *ngIf="!sobreNos?.tercaLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>quarta-feira</td>
-                        <td *ngIf="sobreNos.quartaLaboratorioAbre">{{ sobreNos.horarioQuartaAbertura}} - {{sobreNos.horarioQuartaFechamento}}</td>
-                        <td *ngIf="!sobreNos.quartaLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.quartaLaboratorioAbre">{{ sobreNos?.horarioQuartaAbertura}} - {{sobreNos?.horarioQuartaFechamento}}</td>
+                        <td *ngIf="!sobreNos?.quartaLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>quinta-feira</td>
-                        <td *ngIf="sobreNos.quintaLaboratorioAbre">{{ sobreNos.horarioQuintaAbertura}} - {{sobreNos.horarioQuintaFechamento}}</td>
-                        <td *ngIf="!sobreNos.quintaLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.quintaLaboratorioAbre">{{ sobreNos?.horarioQuintaAbertura}} - {{sobreNos?.horarioQuintaFechamento}}</td>
+                        <td *ngIf="!sobreNos?.quintaLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>sexta-feira</td>
-                        <td *ngIf="sobreNos.sextaLaboratorioAbre">{{ sobreNos.horarioSextaAbertura}} - {{sobreNos.horarioSextaFechamento}}</td>
-                        <td *ngIf="!sobreNos.sextaLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.sextaLaboratorioAbre">{{ sobreNos?.horarioSextaAbertura}} - {{sobreNos?.horarioSextaFechamento}}</td>
+                        <td *ngIf="!sobreNos?.sextaLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>sábado</td>
-                        <td *ngIf="sobreNos.sabadoLaboratorioAbre">{{ sobreNos.horarioSabadoAbertura}} - {{sobreNos.horarioSabadoFechamento}}</td>
-                        <td *ngIf="!sobreNos.sabadoLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.sabadoLaboratorioAbre">{{ sobreNos?.horarioSabadoAbertura}} - {{sobreNos?.horarioSabadoFechamento}}</td>
+                        <td *ngIf="!sobreNos?.sabadoLaboratorioAbre">Fechado</td>
                       </tr>
                       <tr>
                         <td>domingo</td>
-                        <td *ngIf="sobreNos.domingoLaboratorioAbre">{{ sobreNos.horarioDomingoAbertura}} - {{sobreNos.horarioDomingoFechamento}}</td>
-                        <td *ngIf="!sobreNos.domingoLaboratorioAbre">Fechado</td>
+                        <td *ngIf="sobreNos?.domingoLaboratorioAbre">{{ sobreNos?.horarioDomingoAbertura}} - {{sobreNos?.horarioDomingoFechamento}}</td>
+                        <td *ngIf="!sobreNos?.domingoLaboratorioAbre">Fechado</td>
                       </tr>
                       
                 </table>

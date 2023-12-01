@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SobreNos } from 'src/app/shared/interfaces/sobre-nos';
+import { SobreNosService } from 'src/app/shared/services/sobre-nos.service';
 
 @Component({
   selector: 'app-sobre-nos',
   templateUrl: './sobre-nos.component.html',
   styleUrls: ['./sobre-nos.component.scss']
 })
-export class SobreNosComponent {
-sobreNos={
+export class SobreNosComponent implements OnInit{
+/*sobreNos={
   descricao: "texto descricao",
   endereco: "string",
   coordenadorLaboratorio: "Ricardo Kondo",
@@ -33,5 +36,16 @@ sobreNos={
   domingoLaboratorioAbre: false,
   horarioDomingoAbertura: "08:00",
   horarioDomingoFechamento: "18:00"
+}*/
+sobreNos!: SobreNos[];
+
+constructor(private router: Router,  private sobreNosService: SobreNosService) {}
+
+ngOnInit() {
+  this.sobreNosService.listarSobreNos().subscribe({
+    next: (sobreNos) => (this.sobreNos = sobreNos),
+  });
 }
+
+
 }

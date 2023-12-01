@@ -7,11 +7,14 @@ import { User } from '../interfaces/user';
   providedIn: 'root',
 })
 export class UserService {
-  USERS = 'http://18.220.17.233:2077/api/users/list';
+  USERS = 'http://18.220.17.233:2077/api/users';
 
   constructor(private http: HttpClient) {}
 
   listarUsuarios(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.USERS}`);
+    return this.http.get<User[]>(`${this.USERS}/list`);
+  }
+  verUsuario(id: number): Observable<User> {
+    return this.http.get<User>(`${this.USERS}/view/${id}`);
   }
 }
