@@ -32,7 +32,9 @@ export class UsuarioService {
   }
 
   verUsuario(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`${this.USUARIOS}/view/${id}`).pipe();
+    return this.http
+      .get<any>(`${this.USUARIOS}/view/${id}`)
+      .pipe(map((response) => response.data));
   }
 
   criarUsuario(nome: string): Observable<Usuario> {
