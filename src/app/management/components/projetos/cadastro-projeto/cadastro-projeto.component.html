@@ -50,9 +50,11 @@
     </div>
     <div class="uk-margin">
       <label> Descrição do projeto </label>
-      <angular-editor [config]="editorConfig" [(ngModel)]="htmlContent"></angular-editor>
-    <!--  <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>-->
-    
+      <angular-editor
+        [config]="editorConfig"
+        [(ngModel)]="htmlContent"
+      ></angular-editor>
+      <!--  <textarea class="uk-textarea" rows="8" aria-label="Textarea"></textarea>-->
     </div>
     <div class="uk-margin">
       <label> Coordenador do projeto </label>
@@ -74,9 +76,7 @@
       <div>
         <label> Tipo de projeto </label>
         <select class="uk-select" aria-label="Select">
-          <option>Option 01</option>
-          <option>Option 02</option>
-          <option>Option 03</option>
+          <option *ngFor="let tipo of tipos">{{ tipo.nome }}</option>
         </select>
       </div>
     </div>

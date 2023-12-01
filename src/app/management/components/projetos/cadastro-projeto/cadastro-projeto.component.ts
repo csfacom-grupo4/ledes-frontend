@@ -1,36 +1,48 @@
-import { Component} from '@angular/core';
+import { TiposProjetosService } from './../../../../shared/services/tipos-projeto.service';
+import { TipoProjeto } from './../../../../shared/interfaces/tipo-projeto';
+import { Component, OnInit } from '@angular/core';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-cadastro-projeto',
   templateUrl: './cadastro-projeto.component.html',
   styleUrls: ['./cadastro-projeto.component.scss'],
 })
-export class CadastroProjetoComponent   {
+export class CadastroProjetoComponent implements OnInit {
   conteudo: string = ''; // Conteúdo do editor
+  tipos!: TipoProjeto[];
+  situacoes!: any[];
 
-  htmlContent=this.conteudo;
+  constructor(private tiposProjetosService: TiposProjetosService) {}
+
+  ngOnInit(): void {
+    this.tiposProjetosService.listarTiposProjetos().subscribe({
+      next: (tipos) => (this.tipos = tipos),
+    });
+  }
+
+  htmlContent = this.conteudo;
   editorConfig: AngularEditorConfig = {
     editable: true,
-      spellcheck: true,
-      height: '15rem',
-      minHeight: '15rem',
-      maxHeight: 'auto',
-      width: 'auto',
-      minWidth: '0',
-      translate: 'no',
-      enableToolbar: true,
-      showToolbar: true,
-      placeholder: 'Insira o texto...',
-      defaultParagraphSeparator: 'p',
-      defaultFontName: 'Arial',
-      defaultFontSize: '',
-      fonts: [
-        {class: 'arial', name: 'Arial'},
-        {class: 'times-new-roman', name: 'Times New Roman'},
-        {class: 'calibri', name: 'Calibri'},
-        {class: 'comic-sans-ms', name: 'Comic Sans MS'}
-      ],
-     /* customClasses: [
+    spellcheck: true,
+    height: '15rem',
+    minHeight: '15rem',
+    maxHeight: 'auto',
+    width: 'auto',
+    minWidth: '0',
+    translate: 'no',
+    enableToolbar: true,
+    showToolbar: true,
+    placeholder: 'Insira o texto...',
+    defaultParagraphSeparator: 'p',
+    defaultFontName: 'Arial',
+    defaultFontSize: '',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' },
+    ],
+    /* customClasses: [
       {
         name: 'quote',
         class: 'quote',
@@ -46,7 +58,7 @@ export class CadastroProjetoComponent   {
       },
     ],*/
     uploadUrl: 'v1/image',
-   /* upload: (file: File) => {
+    /* upload: (file: File) => {
       // Implemente a lógica para enviar o arquivo para o servidor aqui
       // Por exemplo, você pode usar um serviço HTTP para enviar o arquivo para uma rota específica no backend
       this.seuServicoHttp.enviarArquivoParaServidor(file).subscribe(
@@ -63,12 +75,9 @@ export class CadastroProjetoComponent   {
     uploadWithCredentials: false,
     sanitize: true,
     toolbarPosition: 'top',
-    toolbarHiddenButtons: [
-      ['bold', 'italic'],
-      ['fontSize']
-    ]
-};
-  
+    toolbarHiddenButtons: [['bold', 'italic'], ['fontSize']],
+  };
+
   imagemProjeto: string | ArrayBuffer | null = null;
 
   membros = [
