@@ -38,14 +38,20 @@ export class SobreNosComponent implements OnInit{
   horarioDomingoFechamento: "18:00"
 }*/
 sobreNos!: SobreNos[];
-
+sobreNosDescricao!: String;
+dadosCarregados = false;
 constructor(private router: Router,  private sobreNosService: SobreNosService) {}
 
 ngOnInit() {
   this.sobreNosService.listarSobreNos().subscribe({
-    next: (sobreNos) => (this.sobreNos = sobreNos),
+    next: (sobreNos) => {
+      this.sobreNos = sobreNos;
+      this.dadosCarregados = true; // Definindo a flag como true após carregar os dados
+   
+    },
+    error: (erro) => {
+      console.error('Erro ao carregar sobre nós:', erro);
+    }
   });
-}
-
-
+  }
 }
