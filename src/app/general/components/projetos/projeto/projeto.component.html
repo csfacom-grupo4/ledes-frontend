@@ -34,7 +34,7 @@
             <h3>Membros do Projeto</h3>
         </div>
         <div class="uk-grid">
-            <app-member-card *ngFor="let membro of projeto.projetoUsuarios"  [name]="membro.usuario" [tipo_papel]="membro.tipoPapel" [image]="membro.usuario?.foto"></app-member-card>
+            <app-member-card *ngFor="let membro of projeto.projetoUsuarios"  [name]="membro.usuario" [tipo_papel]="membro.tipoPapel?.nome" [image]="membro.usuario?.foto"></app-member-card>
         </div>
     </div>
 </div>
