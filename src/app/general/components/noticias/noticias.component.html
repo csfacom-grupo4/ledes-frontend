@@ -51,10 +51,11 @@
       </div>
        <div class=" textos-noticia">
         <div class="uk-heigth-1-2">Autor:
-          {{noticia.autor.nome}}
+          {{ noticia.autor ? noticia.autor.nome : 'Autor não definido' }}
           </div>
           <div class="uk-text-small uk-text-muted uk-heigth-1-2">
-           {{formatarDataHora(noticia.dataAgendamento)}}
+            {{ noticia.dataAgendamento ? formatarDataHora(noticia.dataAgendamento) : 'Data não definida' }}
+
             </div>
           <div class="uk-height-1-2">
           {{noticia.corpo}}

@@ -13,7 +13,7 @@ export class NoticiasComponent {
   termoPesquisa: string = '';
   @Input() noticia: any;
 /*
-  noticias:any[] = [
+noticias:any[] = [
     {
       id: 1,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
@@ -23,9 +23,9 @@ export class NoticiasComponent {
       thumbnail:
         'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
         dataAgendamento: "2023-01-12T00:00:00.000Z",
-        usuario: {
+        autor: {
           id:1,
-          nome:'Tiago'
+          nome:'tiago'
         }
       },
     {
@@ -38,7 +38,7 @@ export class NoticiasComponent {
       thumbnail:
         'https://images.unsplash.com/photo-1621847468516-1ed5d0df56fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80',
       dataAgendamento: "2023-01-12T00:00:00.000Z",
-      usuario: {
+      autor: {
         id:1,
         nome:'Tiago'
       }
@@ -53,7 +53,7 @@ export class NoticiasComponent {
 
         'https://images.unsplash.com/photo-1605235904827-2fc511a86dd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2874&q=80',
       dataAgendamento: "2023-01-12T00:00:00.000Z",
-      usuario: {
+      autor: {
         id:2,
         nome:'Vitor'
       }
@@ -62,14 +62,14 @@ export class NoticiasComponent {
       id: 4,
       capa:'https://images.unsplash.com/photo-1610552050890-fe99536c2615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3007&q=80',
       titulo: 'Loki Trai Novamente e Desencadeia o Caos',
-      corpo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      destaque: false,
+      corpo:null,
+      destaque: null,
       thumbnail:
         'https://images.unsplash.com/photo-1578271887552-5ac3a72752bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80',
       dataAgendamento: "2023-01-12T00:00:00.000Z",
-      usuario: {
+      autor: {
         id:1,
-        nome:'Tiago'
+        nome:null
       }
       },
     {
@@ -81,7 +81,7 @@ export class NoticiasComponent {
       thumbnail:
         'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
       dataAgendamento: "2023-01-13T00:00:00.000Z",
-      usuario: {
+      autor: {
         id:1,
         nome:'Tiago'
       }
@@ -94,11 +94,12 @@ export class NoticiasComponent {
       next: (noticias) => (this.noticias = noticias),
     });
   }
-  constructor(private router: Router,  private noticiasService: NoticiasService) {}
 
   //Filtro para noticias em destaque
-  noticiasDestaques(): any[]{
-  
+  noticiasDestaques(): Noticia[]{
+    if (!this.noticias) {
+      return []; // Retorna um array vazio se `noticias` for undefined
+    }
           // Variável booleana para filtragem
       const isAtivo = true;
 
@@ -109,25 +110,30 @@ export class NoticiasComponent {
 
 //filtro de pesquisa da lista de notícias
  
-  filtrarNoticias(): any[] {
-    if (!this.termoPesquisa.trim()) {
-      return this.noticias; // Retorna todos as noticias se a busca estiver vazia
-    }
-    // Propriedades que não devem ser utilizadas na filtragem
-    const propriedadesExcluir: string[] = ['id']; // Adicione outras variáveis aqui
-
-    // Realiza a filtragem dos projetos com base no termo de pesquisa (excluindo as propriedades listadas)
-    return this.noticias.filter(noticia => {
-      const noticiaSemVariaveisExcluidas = { ...noticia };
-      
-      // Remove as propriedades listadas
-
-     // propriedadesExcluir.forEach(prop => delete noticiaSemVariaveisExcluidas[prop]);
-      
-      // Realiza a filtragem
-      return JSON.stringify(noticiaSemVariaveisExcluidas).toLowerCase().includes(this.termoPesquisa.toLowerCase());
-    });
+filtrarNoticias(): Noticia[] {
+  if (!this.termoPesquisa.trim()) {
+    return this.noticias; // Retorna todas as noticias se a busca estiver vazia
   }
+
+  // Usar 'keyof Noticia' para garantir que as propriedades sejam chaves válidas de Noticia
+  const propriedadesExcluir: (keyof Noticia)[] = ['id']; 
+
+  return this.noticias.filter(noticia => {
+    // Copiando o objeto noticia
+    const noticiaSemVariaveisExcluidas = { ...noticia };
+    
+    // Excluindo propriedades
+    propriedadesExcluir.forEach(prop => {
+      delete noticiaSemVariaveisExcluidas[prop as keyof Noticia];
+    });
+    
+    // Realiza a filtragem
+    return JSON.stringify(noticiaSemVariaveisExcluidas).toLowerCase().includes(this.termoPesquisa.toLowerCase());
+  });
+}
+
+
+  constructor(private router: Router,  private noticiasService: NoticiasService) {}
 
  // Método para formatar a classe
   formatarClasse(index: number) {

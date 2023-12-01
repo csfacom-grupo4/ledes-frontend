@@ -13,10 +13,10 @@ export interface Noticia {
   export interface Autor {
     id?: number
     nome?: string
-    sobrenome?: any
-    linkedin?: any
-    github?: any
-    curso?: any
+    sobrenome?: string
+    linkedin?: string
+    github?: string
+    curso?: string
     funcao?: number
-    foto?: any
+    foto?: string
   }
