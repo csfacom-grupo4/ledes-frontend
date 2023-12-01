@@ -1,5 +1,5 @@
 <div class="card uk-box-shadow-medium uk-margin-top">
-    <div class="card__text">{{ noticia.corpo }}</div>
+    <div class="card__text">{{ noticia.titulo }}</div>
     <div class="card__actions">
       <app-circle-button-noticia [action]="'update'" (click)="updateItem(noticia)"></app-circle-button-noticia>
       <app-circle-button-noticia [action]="'updateWithCurrentDate'" (click)="updateWithCurrentDate(noticia)"></app-circle-button-noticia>
