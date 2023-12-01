@@ -121,7 +121,7 @@ export class NoticiasComponent {
       const noticiaSemVariaveisExcluidas = { ...noticia };
       
       // Remove as propriedades listadas
-      
+
      // propriedadesExcluir.forEach(prop => delete noticiaSemVariaveisExcluidas[prop]);
       
       // Realiza a filtragem
