@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Noticia } from 'src/app/shared/interfaces/noticia';
+import { NoticiasService } from 'src/app/shared/services/noticias.service';
 
 @Component({
   selector: 'app-noticias',
@@ -9,7 +12,7 @@ export class NoticiasComponent {
   primeiroItemAberto = true;
   termoPesquisa: string = '';
   @Input() noticia: any;
-
+/*
   noticias:any[] = [
     {
       id: 1,
@@ -83,7 +86,15 @@ export class NoticiasComponent {
         nome:'Tiago'
       }
       },
-  ];
+  ];*/
+  noticias!: Noticia[];
+
+  ngOnInit() {
+    this.noticiasService.listarNoticias().subscribe({
+      next: (noticias) => (this.noticias = noticias),
+    });
+  }
+  constructor(private router: Router,  private noticiasService: NoticiasService) {}
 
   //Filtro para noticias em destaque
   noticiasDestaques(): any[]{
@@ -110,7 +121,8 @@ export class NoticiasComponent {
       const noticiaSemVariaveisExcluidas = { ...noticia };
       
       // Remove as propriedades listadas
-      propriedadesExcluir.forEach(prop => delete noticiaSemVariaveisExcluidas[prop]);
+      
+     // propriedadesExcluir.forEach(prop => delete noticiaSemVariaveisExcluidas[prop]);
       
       // Realiza a filtragem
       return JSON.stringify(noticiaSemVariaveisExcluidas).toLowerCase().includes(this.termoPesquisa.toLowerCase());
