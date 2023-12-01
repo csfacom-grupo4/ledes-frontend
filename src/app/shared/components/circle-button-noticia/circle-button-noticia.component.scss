@@ -1,0 +1,29 @@
+@import "../../../../assets/scss/global";
+
+.circle-button {
+  border-radius: 50%;
+  width: rem(40px);
+  height: rem(40px);
+  color: $main-white;
+  border: none;
+  cursor: pointer;
+}
+
+.update {
+    background-color: $main-green;
+    margin-left: rem(8px);
+  }
+  .update-with-current-date{
+    background-color: $main-blue;
+    margin-left: rem(8px);
+  }
+
+.edit {
+  background-color: $main-red;
+  margin-left: rem(8px);
+}
+
+.delete {
+  background-color: $main-yellow;
+  margin-left: rem(8px);
+}

@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CampoPesquisaComponent } from './shared/components/campo-pesquisa/campo-pesquisa.component';
 import { ListCardNoticiaComponent } from './shared/components/list-card-noticia/list-card-noticia.component';
+import { CircleButtonNoticiaComponent } from './shared/components/circle-button-noticia/circle-button-noticia.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,7 +23,8 @@ import { ListCardNoticiaComponent } from './shared/components/list-card-noticia/
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
     CampoPesquisaComponent,
-    ListCardNoticiaComponent
+    ListCardNoticiaComponent,
+    CircleButtonNoticiaComponent
   ],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -35,7 +37,8 @@ import { ListCardNoticiaComponent } from './shared/components/list-card-noticia/
     CircleButtonComponent,
     FormUnitarioPapelVinculoComponent,
     CampoPesquisaComponent,
-    ListCardNoticiaComponent
+    ListCardNoticiaComponent,
+    CircleButtonNoticiaComponent
   ],
 })
 export class SharedModule {}

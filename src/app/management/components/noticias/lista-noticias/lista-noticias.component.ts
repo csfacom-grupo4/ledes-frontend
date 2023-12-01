@@ -49,7 +49,15 @@ export class ListaNoticiasComponent {
       "visibilidade": 1
     }
   ];
- 
+  /*constructor(private apiService: ApiService) {
+    this.loadData();
+  }
+*/
+  loadData() {
+    /*this.apiService.getNoticias().subscribe((data: any[]) => {
+      this.noticias = data;
+    });*/
+  }
 
   constructor(private router: Router) {}
 
