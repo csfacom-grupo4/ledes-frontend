@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
         console.log('logado');
       },
       (error) => {
-        // Lógica de erro - exiba uma mensagem de erro, por exemplo
         console.error('Erro durante o login:', error);
       }
     );

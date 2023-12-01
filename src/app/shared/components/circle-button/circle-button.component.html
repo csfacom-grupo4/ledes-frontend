@@ -1,6 +1,14 @@
-<button class="circle-button edit" *ngIf="action === 'edit'">
+<button
+  class="circle-button edit"
+  *ngIf="action === 'edit'"
+  (click)="onClicked()"
+>
   <span uk-icon="icon: pencil; ratio: 1.2"></span>
 </button>
-<button class="circle-button delete" *ngIf="action === 'edit'">
+<button
+  class="circle-button delete"
+  *ngIf="action === 'delete'"
+  (click)="onClicked()"
+>
   <span uk-icon="icon: trash; ratio: 1.2"></span>
 </button>
