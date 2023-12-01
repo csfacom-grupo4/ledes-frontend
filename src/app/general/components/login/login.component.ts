@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
     this.authService.login(email, password).subscribe(
       (response) => {
         console.log('logado');
-        console.log(document.cookie);
         this.router.navigate(['/general/noticias']);
       },
       (error) => {

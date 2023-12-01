@@ -17,6 +17,7 @@ export class AuthService {
     });
     return this.http.post(`${this.AUTH_API}/login`, params.toString(), {
       headers,
+      withCredentials: true,
     });
   }
 

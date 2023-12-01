@@ -32,4 +32,11 @@ export class GerenciarPapelVinculoComponent implements OnInit {
     console.log(id);
     this.papeisService.deletarPapel(id).subscribe();
   }
+
+  adicionarPapel(value: string) {
+    console.log(value);
+    this.papeisService.criarPapel(value).subscribe({
+      next: (response) => console.log(response),
+    });
+  }
 }
