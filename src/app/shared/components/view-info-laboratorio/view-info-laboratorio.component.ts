@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-view-info-laboratorio',
@@ -11,7 +11,7 @@ export class ViewInfoLaboratorioComponent implements OnInit {
   @Input() sobreNos: any;
   coordenador1?: string;
 
-  constructor(private router: Router, private coordenadorService: UserService) {}
+  constructor(private router: Router, private coordenadorService: UsuarioService) {}
 
   ngOnInit() {
     this.coordenadorService.listarUsuarios().subscribe({
