@@ -25,7 +25,7 @@ export class VinculosService {
         }
       }),
       catchError((error) => {
-        console.error('Erro ao obter os papéis:', error);
+        console.error('Erro ao obter os vínculos:', error);
         throw error;
       })
     );
