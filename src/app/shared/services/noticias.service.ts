@@ -7,7 +7,7 @@ import { Noticia } from '../interfaces/noticia';
   providedIn: 'root',
 })
 export class NoticiasService {
-    NOTICIAS = 'http://18.220.17.233:2077/api/publicacoes';
+  NOTICIAS = 'http://18.220.17.233:2077/api/publicacoes';
 
   constructor(private http: HttpClient) {}
 
@@ -25,7 +25,7 @@ export class NoticiasService {
         }
       }),
       catchError((error) => {
-        console.error('Erro ao obter os papéis:', error);
+        console.error('Erro ao obter as notícias:', error);
         throw error;
       })
     );

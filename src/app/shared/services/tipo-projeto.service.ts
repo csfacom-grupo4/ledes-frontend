@@ -25,7 +25,7 @@ export class TipoProjetoService {
         }
       }),
       catchError((error) => {
-        console.error('Erro ao obter os papéis:', error);
+        console.error('Erro ao obter os tipos de projeto:', error);
         throw error;
       })
     );
