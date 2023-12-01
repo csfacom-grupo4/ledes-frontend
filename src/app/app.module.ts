@@ -10,6 +10,7 @@ import { ManagementModule } from './management/management.module';
 import { GeneralModule } from './general/general.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -25,6 +26,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    CookieService,
   ],
   bootstrap: [AppComponent],
 })

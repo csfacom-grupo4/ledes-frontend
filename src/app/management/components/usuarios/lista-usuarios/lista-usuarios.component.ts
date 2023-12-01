@@ -31,12 +31,7 @@ export class ListaUsuariosComponent {
     'Karl Mordo',
   ];
 
-  ngOnInit() {
-    this.authService.getUsers().subscribe({
-      next: (response) => console.log(response),
-      error: (error) => console.log(error),
-    });
-  }
+  ngOnInit() {}
 
   constructor(private router: Router, private authService: AuthService) {}
 
