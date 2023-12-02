@@ -1,3 +1,4 @@
+import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
 import { SharedModule } from './shared.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -7,9 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ManagementModule } from './management/management.module';
 import { GeneralModule } from './general/general.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-import { httpInterceptorProviders } from './shared/helpers/http.interceptor';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,7 +23,9 @@ import { httpInterceptorProviders } from './shared/helpers/http.interceptor';
     HttpClientModule,
     AngularEditorModule,
   ],
-  providers: [httpInterceptorProviders],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

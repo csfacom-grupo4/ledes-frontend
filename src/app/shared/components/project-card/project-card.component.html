@@ -1,20 +1,39 @@
 <div class="project-card uk-card uk-card-default uk-margin-small-bottom">
-    <div class="div-imagem">
-        <img [src]="projeto.imagem || './assets/default/default_project.jpg'" alt="Imagem do Projeto" class=""/>
-    </div>
-    <div class="div-descricao">
-        <a [routerLink]="['/general/projetos', projeto.id]">
-        <h3 class="title-project uk-margin-left uk-margin-right">{{ projeto.titulo }}</h3></a>
-        <p class="uk-margin-left uk-margin-right">Coordenador: {{ projeto.coordenador }}</p>
-        <div class="uk-flex uk-flex-between uk-margin-left uk-margin-right">
-            <div class="uk-flex tipo-status">
-                <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.situacao }}</div>
-                <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipo }}</div>
-            </div>
-           <div class="uk-flex"><div>{{ projeto.data_inicio }} </div><div class="" *ngIf="projeto.dataFim !== null">-{{ projeto.data_termino }}</div>
-              <div class="uk-text-left" *ngIf="projeto.data_termino === null">agora
-              </div></div> 
+  <div class="div-imagem">
+    <img
+      [src]="projeto.foto || './assets/default/default_project.jpg'"
+      alt="Imagem do Projeto"
+      class=""
+    />
+  </div>
+  <div class="div-descricao">
+    <a [routerLink]="['/general/projetos', projeto.id]">
+
+      <h3 class="title-project uk-margin-left uk-margin-right">
+      {{ projeto.titulo }}
+      </h3></a
+    >
+    <p class="uk-margin-left uk-margin-right">
+      Coordenador: {{ projeto.coordenador.nome }}
+    </p>
+    <div class="uk-flex uk-flex-between uk-margin-left uk-margin-right">
+      <div class="uk-flex tipo-status">
+        <div class="status-projeto uk-text-small uk-text-center">
+          {{ projeto.situacaoProjeto.nome }}
         </div>
+        <div class="tipo-projeto uk-text-small uk-text-center">
+          {{ projeto.tipoProjeto.nome }}
+        </div>
+      </div>
+      <div class="uk-flex">
+        <div>{{ projeto.dataInicio | date : "shortDate" }}</div>
+        <div class="" *ngIf="projeto.dataFim !== null">
+          - {{ projeto.dataTermino | date : "shortDate" }}
+        </div>
+        <div class="uk-text-left" *ngIf="projeto.dataTermino === null">
+          agora
+        </div>
+      </div>
     </div>
   </div>
-  
+</div>

@@ -5,10 +5,10 @@
       Adicionar notícia
     </button>
     <div class="list__content uk-margin">
-      <app-list-card
-        *ngFor="let projeto of projetos"
-        [text]="projeto"
-      ></app-list-card>
+      <app-list-card-noticia
+        *ngFor="let noticia of noticias"
+        [noticia]="noticia"
+      ></app-list-card-noticia>
     </div>
   </div>
 </div>

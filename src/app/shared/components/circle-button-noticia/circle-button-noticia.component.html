@@ -1,0 +1,13 @@
+<button class="circle-button edit" *ngIf="action === 'edit'" (click)="executeAction()">
+    <span uk-icon="icon: pencil; ratio: 1.2"></span>
+  </button>
+  <button class="circle-button delete" *ngIf="action === 'delete'" (click)="executeAction()">
+    <span uk-icon="icon: trash; ratio: 1.2"></span>
+  </button>
+  <button class="circle-button update" *ngIf="action === 'update'" (click)="executeAction()">
+    <span uk-icon="icon: clock; ratio: 1.2"></span>
+  </button>
+  <button class="circle-button update-with-current-date" *ngIf="action === 'updateWithCurrentDate'" (click)="executeAction()">
+    <span uk-icon="icon: arrow-up; ratio: 1.2"></span>
+  </button>
+  

@@ -6,9 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./member-card.component.scss'],
 })
 export class MemberCardComponent {
-  @Input() name: string = 'Nome completo do membro';
-  @Input() tipo_papel: string = 'papel do membro';
+  @Input() id: any;
+  @Input() name!: any ;
+  @Input() tipo_papel!: any;
   @Input() image: string =
     'https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3F1YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60';
-   
+
   }

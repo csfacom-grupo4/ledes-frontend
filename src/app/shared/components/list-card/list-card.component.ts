@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list-card',
@@ -7,4 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class ListCardComponent {
   @Input() text!: string;
+  @Input() isEdit: boolean = true;
+  @Output() buttonEdit: EventEmitter<void> = new EventEmitter<void>();
+  @Output() buttonDelete: EventEmitter<void> = new EventEmitter<void>();
+
+  onEdit() {
+    this.buttonEdit.emit();
+  }
+  onDelete() {
+    this.buttonDelete.emit();
+  }
 }

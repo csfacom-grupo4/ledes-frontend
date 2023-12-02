@@ -6,6 +6,7 @@ import { MembrosComponent } from './components/membros/membros.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 import { ListaProjetosComponent } from './components/projetos/lista-projetos/lista-projetos.component';
 import { ProjetoComponent } from './components/projetos/projeto/projeto.component';
+import { MembroComponent } from './components/membros/membro/membro.component';
 
 const generalRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,7 +14,8 @@ const generalRoutes: Routes = [
   { path: 'membros', component: MembrosComponent },
   { path: 'sobre-nos', component: SobreNosComponent },
   { path: 'projetos', component: ListaProjetosComponent },
-  { path: 'projetos/:id', component: ProjetoComponent }
+  { path: 'projetos/:id', component: ProjetoComponent },
+  { path: 'membros/:id', component: MembroComponent}
 ];
 
 @NgModule({

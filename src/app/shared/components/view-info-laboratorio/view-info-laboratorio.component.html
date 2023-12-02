@@ -1,56 +1,79 @@
-<div class="componente-ledes uk-card uk-card-default">
-    <div class="dados-ledes">
-        <h3>LABORATÓRIO DE ENGENHARIA DE SOFTWARE - LEDES</h3>
-        <p>Telefone: {{sobreNos.telefoneLaboratorio}}</p>
-        <p>Coordenador: {{sobreNos.coordenadorLaboratorio}}</p>
-        <p>E-mail do coordenador: {{sobreNos.emailCoordenador}}</p>
-        <div>
-            <div>
-                <p class="titulo-funcionamento">Horário de funcionamento</p>
-            </div>
-            <div>
-                <table class="dia-hora">   
+ 
+<div class=" uk-margin-large-left uk-margin-large-right uk-margin-top">
+  <h2>Sobre Nós</h2>
+
+<!-- Quadros usando Grid do UIkit -->
+<div class="uk-card uk-card-default uk-card-body uk-flex uk-margin-medium-bottom" >
+  <!-- Quadro 1: Descrição -->
+  <div>
+    <h3>Descrição</h3>
+    <div>{{sobreNos?.descricao}}</div>
+  </div>
+  
+
+  <!-- Quadro 2: Imagem 
+  <div>
+    
+      <h3>Imagem</h3>
+      <img src="caminho/para/imagem" alt="Imagem carregada anteriormente">
+   
+  </div>-->
+</div>
+  <!-- Quadro 3: Endereço, Coordenador, Email, Telefone, Horários -->
+  <div class="componente-ledes uk-card uk-card-default">
+  <div class="dados-ledes">
+      <h3>LABORATÓRIO DE ENGENHARIA DE SOFTWARE - LEDES</h3>
+      <p>Telefone: {{ sobreNos?.telefoneLaboratorio }}</p>
+      <p>Coordenador: {{coordenador1}}</p>
+      <p>E-mail do coordenador: {{sobreNos?.emailCoordenador}}</p>
+      <div>
+          <div>
+              <p class="titulo-funcionamento">Horário de funcionamento</p>
+          </div>
+          <div>
+              <table class="dia-hora">   
+                  <tr>
+                      <td>segunda-feira</td>
+                      <td *ngIf="sobreNos?.segundaLaboratorioAbre">{{ sobreNos?.horarioSegundaAbertura}} - {{sobreNos?.horarioSegundaFechamento}}</td>
+                      <td *ngIf="!sobreNos?.segundaLaboratorioAbre">Fechado</td>
+                    </tr>
                     <tr>
-                        <td>segunda-feira</td>
-                        <td *ngIf="sobreNos.segundaLaboratorioAbre">{{ sobreNos.horarioSegundaAbertura}} - {{sobreNos.horarioSegundaFechamento}}</td>
-                        <td *ngIf="!sobreNos.segundaLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>terça-feira</td>
-                        <td *ngIf="sobreNos.tercaLaboratorioAbre">{{ sobreNos.horarioTercaAbertura}} - {{sobreNos.horarioTercaFechamento}}</td>
-                        <td *ngIf="!sobreNos.tercaLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>quarta-feira</td>
-                        <td *ngIf="sobreNos.quartaLaboratorioAbre">{{ sobreNos.horarioQuartaAbertura}} - {{sobreNos.horarioQuartaFechamento}}</td>
-                        <td *ngIf="!sobreNos.quartaLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>quinta-feira</td>
-                        <td *ngIf="sobreNos.quintaLaboratorioAbre">{{ sobreNos.horarioQuintaAbertura}} - {{sobreNos.horarioQuintaFechamento}}</td>
-                        <td *ngIf="!sobreNos.quintaLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>sexta-feira</td>
-                        <td *ngIf="sobreNos.sextaLaboratorioAbre">{{ sobreNos.horarioSextaAbertura}} - {{sobreNos.horarioSextaFechamento}}</td>
-                        <td *ngIf="!sobreNos.sextaLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>sábado</td>
-                        <td *ngIf="sobreNos.sabadoLaboratorioAbre">{{ sobreNos.horarioSabadoAbertura}} - {{sobreNos.horarioSabadoFechamento}}</td>
-                        <td *ngIf="!sobreNos.sabadoLaboratorioAbre">Fechado</td>
-                      </tr>
-                      <tr>
-                        <td>domingo</td>
-                        <td *ngIf="sobreNos.domingoLaboratorioAbre">{{ sobreNos.horarioDomingoAbertura}} - {{sobreNos.horarioDomingoFechamento}}</td>
-                        <td *ngIf="!sobreNos.domingoLaboratorioAbre">Fechado</td>
-                      </tr>
-                      
-                </table>
-           </div>
-        </div>
-    </div>
-    <div class="mapa-ledes map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11716.167388182837!2d-54.619824967685155!3d-20.504052492971816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e5f512dc28e9%3A0x6d7d288192cb4db3!2sLaborat%C3%B3rio%20de%20Engenharia%20de%20Software%20-%20LEDES!5e0!3m2!1spt-BR!2sbr!4v1700356469001!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+                      <td>terça-feira</td>
+                      <td *ngIf="sobreNos?.tercaLaboratorioAbre">{{ sobreNos?.horarioTercaAbertura}} - {{sobreNos?.horarioTercaFechamento}}</td>
+                      <td *ngIf="!sobreNos?.tercaLaboratorioAbre">Fechado</td>
+                    </tr>
+                    <tr>
+                      <td>quarta-feira</td>
+                      <td *ngIf="sobreNos?.quartaLaboratorioAbre">{{ sobreNos?.horarioQuartaAbertura}} - {{sobreNos?.horarioQuartaFechamento}}</td>
+                      <td *ngIf="!sobreNos?.quartaLaboratorioAbre">Fechado</td>
+                    </tr>
+                    <tr>
+                      <td>quinta-feira</td>
+                      <td *ngIf="sobreNos?.quintaLaboratorioAbre">{{ sobreNos?.horarioQuintaAbertura}} - {{sobreNos?.horarioQuintaFechamento}}</td>
+                      <td *ngIf="!sobreNos?.quintaLaboratorioAbre">Fechado</td>
+                    </tr>
+                    <tr>
+                      <td>sexta-feira</td>
+                      <td *ngIf="sobreNos?.sextaLaboratorioAbre">{{ sobreNos?.horarioSextaAbertura}} - {{sobreNos?.horarioSextaFechamento}}</td>
+                      <td *ngIf="!sobreNos?.sextaLaboratorioAbre">Fechado</td>
+                    </tr>
+                    <tr>
+                      <td>sábado</td>
+                      <td *ngIf="sobreNos?.sabadoLaboratorioAbre">{{ sobreNos?.horarioSabadoAbertura}} - {{sobreNos?.horarioSabadoFechamento}}</td>
+                      <td *ngIf="!sobreNos?.sabadoLaboratorioAbre">Fechado</td>
+                    </tr>
+                    <tr>
+                      <td>domingo</td>
+                      <td *ngIf="sobreNos?.domingoLaboratorioAbre">{{ sobreNos?.horarioDomingoAbertura}} - {{sobreNos?.horarioDomingoFechamento}}</td>
+                      <td *ngIf="!sobreNos?.domingoLaboratorioAbre">Fechado</td>
+                    </tr>
+                    
+              </table>
+         </div>
+      </div>
+  </div>
+  <div class="mapa-ledes map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11716.167388182837!2d-54.619824967685155!3d-20.504052492971816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e5f512dc28e9%3A0x6d7d288192cb4db3!2sLaborat%C3%B3rio%20de%20Engenharia%20de%20Software%20-%20LEDES!5e0!3m2!1spt-BR!2sbr!4v1700356469001!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
 </div>

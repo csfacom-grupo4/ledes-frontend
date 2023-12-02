@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-const AUTH_API = 'http://18.220.17.233:2077/api/auth/';
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-};
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -14,18 +7,25 @@ const httpOptions = {
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  login(username: string, password: string): Observable<any> {
-    return this.http.post(
-      AUTH_API + 'login',
-      {
-        username,
-        password,
-      },
-      httpOptions
-    );
+  AUTH_API = 'http://18.220.17.233:2077/api/auth';
+
+  login(email: string, password: string) {
+    let params = new HttpParams().set('email', email).set('password', password);
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+    return this.http.post(`${this.AUTH_API}/login`, params.toString(), {
+      headers,
+      withCredentials: true,
+    });
   }
 
-  logout(): Observable<any> {
-    return this.http.post(AUTH_API + 'logout', {}, httpOptions);
+  logout() {
+    return this.http.post(
+      `${this.AUTH_API}/logout`,
+      {},
+      { withCredentials: true }
+    );
   }
 }

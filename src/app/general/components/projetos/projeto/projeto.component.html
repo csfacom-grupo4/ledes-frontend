@@ -1,14 +1,18 @@
 <div class="projeto-component">
     <div class="projeto-titulo">
-        <h2>{{ projeto.titulo}}</h2>
+        <h2>{{ projeto!.titulo}}</h2>
     </div>
     <div class="uk-margin-top">
         <div class="uk-flex tipo-status">
-            <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.situacao }}</div>
-            <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipo }}</div>
+            <div class="status-projeto uk-text-small uk-text-center ">{{ projeto.situacaoProjeto?.nome }}</div>
+            <div class="tipo-projeto uk-text-small uk-text-center ">{{ projeto.tipoProjeto?.nome }}</div>
         </div>
-       <div class="uk-flex uk-margin-top"><div>{{ projeto.data_inicio }} </div><div class="" *ngIf="projeto.dataFim !== null">-{{ projeto.data_termino }}</div>
-          <div class="uk-text-left" *ngIf="projeto.data_termino === null">agora
+       <div class="uk-flex uk-margin-top">
+        <div>
+        {{ projeto.dataInicio | date : "shortDate" }}
+    </div>
+        <div class="" *ngIf="projeto.dataTermino !== null">-{{ projeto.dataTermino  | date : "shortDate" }}</div>
+          <div class="uk-text-left" *ngIf="projeto.dataTermino === null">agora
           </div>
         </div> 
     </div>
@@ -30,7 +34,7 @@
             <h3>Membros do Projeto</h3>
         </div>
         <div class="uk-grid">
-            <app-member-card *ngFor="let membro of projeto.membros"  [name]="membro.nome" [tipo_papel]="membro.tipo_papel" [image]="membro.foto"></app-member-card>
+            <app-member-card *ngFor="let membro of projeto.projetoUsuarios"  [name]="membro.usuario" [tipo_papel]="membro.tipoPapel?.nome" [image]="membro.usuario?.foto"></app-member-card>
         </div>
     </div>
 </div>
