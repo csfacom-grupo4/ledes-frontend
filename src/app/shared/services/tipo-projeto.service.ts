@@ -7,8 +7,8 @@ import { TipoProjeto } from '../interfaces/tipo-projeto';
   providedIn: 'root',
 })
 export class TipoProjetoService {
-  TIPO_PROJETOS = 'http://18.220.17.233:2077/api/tipo-projetos';
-
+  //TIPO_PROJETOS = 'http://18.220.17.233:2077/api/tipo-projetos';
+  TIPO_PROJETOS = 'http://localhost:2077/api/tipo-projetos';
   constructor(private http: HttpClient) {}
 
   listarTiposProjeto(): Observable<TipoProjeto[]> {

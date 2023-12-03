@@ -2,12 +2,16 @@ import { Projeto } from '../interfaces/projeto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjetoService {
-  PROJETOS = 'http://18.220.17.233:2077/api/projetos';
+ // PROJETOS = 'http://18.220.17.233:2077/api/projetos';
+
+  CONST_API_URL = new Path().URL_API;
+  PROJETOS = this.CONST_API_URL + '/projetos';
 
   constructor(private http: HttpClient) {}
 

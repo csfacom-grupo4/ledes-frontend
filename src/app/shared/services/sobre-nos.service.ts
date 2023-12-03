@@ -2,12 +2,18 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
 import { SobreNos } from '../interfaces/sobre-nos'; // Alterado de TipoProjeto para SobreNos
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SobreNosService {
-  SOBRE_NOS = 'http://18.220.17.233:2077/api/configuracao-sobre-nos'; // Alterado de TIPO_PROJETOS para SOBRE_NOS
+  //SOBRE_NOS = 'http://18.220.17.233:2077/api/configuracao-sobre-nos'; 
+  
+  // Alterado de TIPO_PROJETOS para SOBRE_NOS
+
+  CONST_API_URL = new Path().URL_API;
+  SOBRE_NOS = this.CONST_API_URL + '/configuracao-sobre-nos';
 
   constructor(private http: HttpClient) {}
 

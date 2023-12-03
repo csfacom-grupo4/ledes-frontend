@@ -2,12 +2,16 @@ import { Vinculo } from './../interfaces/vinculo';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root',
 })
 export class VinculosService {
-  VINCULOS = 'http://18.220.17.233:2077/api/tipo-vinculos';
+ // VINCULOS = 'http://18.220.17.233:2077/api/tipo-vinculos';
+
+  CONST_API_URL = new Path().URL_API;
+  VINCULOS = this.CONST_API_URL + '/tipo-vinculos';
 
   constructor(private http: HttpClient) {}
 

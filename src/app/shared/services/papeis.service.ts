@@ -2,12 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
 import { Papel } from '../interfaces/papel';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PapeisService {
-  PAPEIS = 'http://18.220.17.233:2077/api/tipo-papeis';
+ // PAPEIS = 'http://18.220.17.233:2077/api/tipo-papeis';
+  //PAPEIS = 'http://localhost:2077/api/tipo-papeis';
+
+  CONST_API_URL = new Path().URL_API;
+  PAPEIS = this.CONST_API_URL + '/tipo-papeis';
 
   constructor(private http: HttpClient) {}
 

@@ -2,12 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
 import { Noticia } from '../interfaces/noticia';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NoticiasService {
-  NOTICIAS = 'http://18.220.17.233:2077/api/publicacoes';
+
+  CONST_API_URL = new Path().URL_API;
+  NOTICIAS = this.CONST_API_URL + '/publicacoes';
+  //NOTICIAS = 'http://18.220.17.233:2077/api/publicacoes';
 
   constructor(private http: HttpClient) {}
 
